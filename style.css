@@ -1,0 +1,109 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 75%;
+}
+.picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.color {
+  color: #ff1700;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.click {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  color: khaki;
+  transition: color 1s, font-size 1s;
+}
+.click:hover {
+  color: black;
+  font-size: 140%;
+}
+.wrapper .static-text {
+  color: gold;
+  font-size: 60px;
+  font-weight: 400;
+}
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+.dynamic-text li {
+  list-style: none;
+  color: #19282f;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+.wrapper .dynamic-text {
+  margin-left: 15px;
+  line-height: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+.dynamic-text li {
+  position: relative;
+  text-align: center;
+}
+
+.dynamic-text li ::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #19282f;
+  background-color: white;
+  left: 0;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .dynamic-text li {
+    position: relative;
+    text-align: left;
+  }
+}
