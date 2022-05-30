@@ -12,6 +12,7 @@
     --weigth-med:500;
     --weight-bold:700;
     --color-yellow: #f4d504;
+    --font-serif:'Playfair Display', serif;
 }
 /*Typography*/
 .credentials{
@@ -67,4 +68,44 @@ width: 30%;
 }
 .inline-pic-link:hover{
     text-decoration: none;
+}
+
+/*quotes*/
+.quotes{
+    color: var(--color-light-black);
+    width: 100%;
+}
+.quotes-words{
+    font-family: var(--font-serif);
+    padding: 2rem;
+}
+
+/*article Main*/
+.article-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.article-main--header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.article-main--paragraph{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*final article size*/
+@media screen and (min-width:1024px) {
+    .fit-on-screen{
+        max-width: 1024px;
+    }
+    
 }
