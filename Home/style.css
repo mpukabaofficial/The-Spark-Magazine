@@ -20,6 +20,7 @@
 html{
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 body{
   color: var(--color-black);
@@ -58,6 +59,13 @@ h4{
   color: var(--color-light-black);
   text-transform: uppercase;
   font-weight: var(--weight-light);
+}
+.bold{
+  font-weight: var(--weight-bold);
+}
+.italic{
+  font-style: italic;
+  color: var(--color-light-black);
 }
 /*Links*/
 a:link, a:visited{
@@ -289,6 +297,12 @@ footer{
  }
  
   
+}
+
+@media screen and (max-height: 700px) and (min-width: 1024px){
+  .hero-info{
+    transform: translate(200px, -400px)
+  }
 }
 
 /*final*/
