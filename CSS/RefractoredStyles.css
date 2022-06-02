@@ -115,10 +115,10 @@ a:hover{
 .icons:hover{
   background-color: #F8F7F7;
 }
-
 .icon-row{
   display: flex;
 }
+
 /*notifications*/
 .notifications{
   background-color: var(--color-black);
@@ -347,14 +347,22 @@ footer{
 .home-logo{
 width: 30%;
 }
+.home-button{
+  display: inline-block;
+}
 
 /*Audio Button*/
 .audio{
   height: 40px;
   margin: 1rem;
+  width: auto;
 }
 .audio-button{
   width: 20px;
+}
+.audio-file{
+  position: absolute;
+  bottom: 0;
 }
 
 /*article navigation*/
