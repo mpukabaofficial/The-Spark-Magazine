@@ -147,14 +147,18 @@ a:hover{
 
 /*Button*/
 #btn{
-  background-color: var(--color-accent);
+  
   width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
   border: none;
+  
+}
+.btn-color{
   color: var(--color-white);
+  background-color: var(--color-accent);
 }
 
 /*Collected List*/
@@ -348,6 +352,9 @@ width: 30%;
 .audio{
   height: 40px;
   margin: 1rem;
+}
+.audio-button{
+  width: 20px;
 }
 
 /*article navigation*/
