@@ -225,9 +225,37 @@ a:hover{
   text-decoration: none;
 }
 
+/*Hanging Ad*/
+.hanging-ad{
+  background-color: #00be70;
+  color: white;
+  width: 300px;
+  border-radius: 10px;
+}
+.hanging-ad:hover{
+  background-color: #009959;
+}
+.hanging-ad__fit{
+  padding: 0.5rem 2rem;
+}
+.hanging-ad__text{
+  font-weight: 100;
+}
+
 /*headlines*/
 .headline__image{
   width: 100%;
+}
+
+
+.embeded-vid{
+  width: 100%;
+  height: 300px;
+}
+@media screen and (min-width:1024px) {
+  .embeded-vid{
+  height: 600px;
+}
 }
 
 /*collapsible menu*/
