@@ -11,3 +11,4 @@ button.addEventListener("click", (event) =>{
         menu.style.display = "none"
     }
 })
+

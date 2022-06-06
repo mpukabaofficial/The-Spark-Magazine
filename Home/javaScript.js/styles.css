@@ -1,16 +1,3 @@
-/*Hanging Ad*/
-.hanging-ad{
-    background-color: #00be70;
-    color: white;
-    width: 300px;
-    border-radius: 10px;
-}
-.hanging-ad:hover{
-    background-color: #009959;
-}
-.hanging-ad__fit{
-    padding: 0.5rem 2rem;
-}
-.hanging-ad__text{
-    font-weight: 100;
+.modal-poster{
+    padding: 2rem;
 }
