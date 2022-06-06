@@ -25,7 +25,7 @@ html{
 }
 body{
   color: var(--color-black);
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: var(--weight-reg);
   position: relative;
   width: 100vw;
@@ -38,7 +38,7 @@ h1{
   padding-bottom: 0;
 }
 h2{
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: var(--weigth-med);
   text-transform: uppercase;
 }
@@ -50,8 +50,9 @@ text-transform: uppercase;
 margin:0;
 }
 h4{
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: var(--weigth-med);
+  text-align: center;
 }
 .text-special{
   color: var(--color-white);
@@ -59,7 +60,7 @@ h4{
   font-weight: var(--weight-reg);
 }
 .fine-print{
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--color-light-black);
   text-transform: uppercase;
   font-weight: var(--weight-light);
@@ -138,7 +139,7 @@ a:hover{
 .noti-text{
   margin: 0;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .notifications:hover{
   background-color: black;
@@ -159,13 +160,14 @@ a:hover{
 /*Button*/
 #btn{
   background-color: var(--color-accent);
-  width: 200px;
+  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
   border: none;
   color: var(--color-white);
+  font-size: 1.5rem;
 }
 
 /*Collected List*/
@@ -191,7 +193,9 @@ a:hover{
 
 /*article*/
 .article-footer{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*information section*/
@@ -270,9 +274,34 @@ a:hover{
   bottom: 1rem;
   position: fixed;
 }
+/*Jump*/
+.skip{
+  width: 70px;
+  position: fixed;
+  top: 10rem;
+  right: 1rem;
+  border-radius: 20px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skip-text{
+  font-size: 1rem;
+  color: white;
+  padding: 1.3rem;
+  font-weight: var(--weight-reg);
+
+}
+
+.skip a:hover{
+  text-decoration: none;
+}
 
 @media screen and (min-width:1024px) {
-  
+  .skip{
+    display: none;
+  }
 }
 
 /*content-outline*/
@@ -372,7 +401,7 @@ footer{
     transform: translate(400px);
   }
  .hero-info{
-   transform: translate(200px, -600px);
+   transform: translate(-300px, -600px);
  }
  
   
@@ -515,8 +544,9 @@ footer{
     flex-direction: column;
     align-items: center;
     width: 70%;
-    
+   
   }
+  
   
 }
 /*For specific browsers*/
