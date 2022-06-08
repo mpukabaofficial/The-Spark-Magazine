@@ -17,39 +17,78 @@
     <link rel="icon" type="image/png" href="/icon.png" />
     <title>The Spark Magazine - Home</title>
   </head>
+  <!--Beginning of body-->
   <body>
-    <div class="notifications">
-      <a href="/Articles/Guests/FourthEdition.html" class="link">
-        <p class="text-special noti-text">
-          The Fourth Edition of The Spark Magazine is out!
-        </p>
-      </a>
-    </div>
     <article class="article">
       <header class="article-header">
         <article class="article hero">
           <header class="article-header hero-header">
-            <img
-              src="/images/Black and White logo.png"
-              alt=""
-              class="hero-logo"
-            />
-            <div class="collapsible">
-              <button id="btn">menu</button>
-              <div class="collected-menu collapsible-menu">
-                <ul class="list list-menu">
-                  <li class="list-item">
-                    <a href="/Articles/index.html">Articles</a>
-                  </li>
-                  <li class="list-item">
-                    <a href="/About/index.html">About</a>
-                  </li>
-                  <li class="list-item"><a href="/Team/index.html">Team</a></li>
-                  <li class="list-item">
-                    <a href="/Store/index.html">Store</a>
-                  </li>
-                </ul>
+            <!--navigation bar-->
+            <div class="navigation-bar">
+              <!--Logo for navigation bar-->
+              <div class="logo-container__nav">
+                <img
+                  src="/images/Black and White logo.png"
+                  alt="this is the logo of the Spark Magazine"
+                  class="logo__nav"
+                />
               </div>
+              <!--Bigger screen nav-->
+              <div class="bigger-screen__nav">
+                <div class="linked-list linked-list-container">
+                  <ul class="list bigger-screen-list">
+                    <a
+                      href="/Team/index.html"
+                      class="linked-list linked-list__nav"
+                      ><li class="list-item list__in-line">Team</li></a
+                    ><a
+                      href="/Store/index.html"
+                      class="linked-list linked-list__nav"
+                      ><li class="list-item list__in-line">Store</li></a
+                    ><a
+                      href="/About/index.html"
+                      class="linked-list linked-list__nav"
+                      ><li class="list-item list__in-line">About</li></a
+                    >
+                  </ul>
+                </div>
+              </div>
+
+              <!--Modal Nav Bar-->
+              <div class="btn-container btn-container__nav open-menu__nav">
+                <button
+                  class="btn__nav"
+                  data-modal-target="#modal"
+                  id="pop-up__btn"
+                >
+                  <i class="fas fa-bars icons icons__nav fa-2x"></i>
+                </button>
+              </div>
+              <div class="nav-bar__modal modal" id="modal">
+                <div class="btn-container btn-container__nav modal-close-btn">
+                  <button data-close-button class="btn__nav close-button">
+                    <i class="fas fa-times icons icons__nav fa-2x"></i>
+                  </button>
+                </div>
+                <div class="linked-list linked-list__nav-bar">
+                  <ul class="list list-menu__nav-bar">
+                    <a href="/Team/index.html" class="linked-list"
+                      ><li class="list-item list__in-line list-item__nav">
+                        Team
+                      </li></a
+                    ><a href="/Store/index.html" class="linked-list"
+                      ><li class="list-item list__in-line list-item__nav">
+                        Store
+                      </li></a
+                    ><a href="/About/index.html" class="linked-list"
+                      ><li class="list-item list__in-line list-item__nav">
+                        About
+                      </li></a
+                    >
+                  </ul>
+                </div>
+              </div>
+              <div id="overlay"></div>
             </div>
           </header>
           <main class="article-main hero-main">
@@ -135,7 +174,8 @@
                 <main class="article-main card-main">
                   <h2>Spiritual: Dreams vs Attitude</h2>
                   <p>
-                    Take a spiritual journey as you discover how your attitude has affected your ability to chase your dreams.
+                    Take a spiritual journey as you discover how your attitude
+                    has affected your ability to chase your dreams.
                   </p>
                 </main>
                 <footer class="article-footer card-footer">
@@ -381,67 +421,6 @@
             </div>
           </a>
         </div>
-        <div class="event-catalogue">
-          <div class="modal-poster poster--secondary"><h3 id="events">Events</h3></div>
-          <button data-modal-target="#modal" id="pop-up__btn">
-            <article class="event-outline">
-              <header class="article-header__event">
-                <img src="/images/Event 1.jpeg" alt="" class="image-event" />
-              </header>
-              <main class="article-main__event">
-                <p>TNS Invades Piggs Peak</p>
-              </main>
-              <footer class="article-footer__event">
-                <p class="date">24 June 2022</p>
-              </footer>
-            </article>
-          </button>
-          <article class="modal" id="modal">
-            <header class="modal-header">
-              <div class="title">
-                <h1 class="modal-title">TNS Invades Piggs Peak</h1>
-              </div>
-              <button data-close-button class="close-button">&times;</button>
-            </header>
-            <main class="modal-main">
-              <img src="/images/Event 1.jpeg" alt="" class="modal-image" />
-              <p class="location">Location: Piggs Peak club</p>
-              <p class="price">Fee: E70 before 10PM, E100 after 10PM</p>
-            </main>
-            <footer class="modal-date fine-print">21 June 2022</footer>
-          </article>
-          <div id="overlay"></div>
-          <button data-modal-target="#modal2" id="pop-up__btn">
-            <article class="event-outline">
-              <header class="article-header__event">
-                <img src="/images/Event 2.jpeg" alt="a MotoSport poster" class="image-event" />
-              </header>
-              <main class="article-main__event">
-                <p>Eswatini MotoSport Weekend</p>
-              </main>
-              <footer class="article-footer__event">
-                <p class="date">1 & 2 July 2022</p>
-              </footer>
-            </article>
-          </button>
-          <article class="modal" id="modal2">
-            <header class="modal-header">
-              <div class="title">
-                <h1 class="modal-title">Eswatini MotoSport Weekend</h1>
-              </div>
-              <button data-close-button class="close-button">&times;</button>
-            </header>
-            <main class="modal-main">
-              <img src="/images/Event 2.jpeg" alt="a MotoSport poster" class="modal-image" />
-              <p class="location">Location: Riders Ranch</p>
-              <p class="price">Fee: Friday E150, Saturday E200</p>
-            </main>
-            <footer class="modal-date fine-print">1 & 2 July 2022</footer>
-          </article>
-          <div id="overlay"></div>
-        </div>
-        </div>
-        
       </main>
       <footer class="article-footer">
         <footer>
@@ -479,8 +458,10 @@
         </article>
       </div>
     </a>
-    <div class="skip"><a href="#events" ><p class="skip-text"> skip to events</p></a></div>
+    <div class="skip">
+      <a href="#events"><p class="skip-text">skip to events</p></a>
+    </div>
   </body>
-  <script src="/Home/javaScript.js/javaScript.js"></script>
+  <script src="/javaScript/Collapsible.js"></script>
   <script src="/javaScript/modal.js"></script>
 </html>

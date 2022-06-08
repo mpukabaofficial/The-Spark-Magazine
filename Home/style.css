@@ -1,14 +1,14 @@
-
 *,*::after,*::before{
   box-sizing: border-box;
 }
 /*variables*/
 :root{
-  --color-primary:#C06F75;
+  --color-primary:white;
   --color-secondary:#C07E83;
   --color-accent:#C88287;
   --color-black:#2D2D2D;
   --color-light-black:#8F8E8E;
+  --color-light-grey:#f8f8f8;
   --color-white:#fff;
   --weight-light: 200;
   --weight-reg:400;
@@ -21,7 +21,8 @@ html{
   font-size: 62.5%;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  
+  font-weight: var(--weight-light);
+  overflow-x: hidden
 }
 body{
   color: var(--color-black);
@@ -29,7 +30,7 @@ body{
   font-weight: var(--weight-reg);
   position: relative;
   width: 100vw;
-  overflow-x: hidden;
+  ;
 }
 h1{
   font-size: 4.8rem;
@@ -73,6 +74,9 @@ h4{
   color: var(--color-light-black);
 }
 /*Links*/
+a{
+  width: 100%;
+}
 a:link, a:visited{
   font-weight: var(--weight-light);
   color: inherit;
@@ -92,11 +96,15 @@ a:hover{
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 1.5rem;
+  
 }
 .list__in-line{
   display: inline-block;
   margin: 0 1rem;
 }
+
+
 
 @media screen and (min-width: 1024px) {
   .nav-links:link, .nav-links:visited{
@@ -111,7 +119,6 @@ a:hover{
 .icons{
   width: 50px;
   height: 50px;
-  margin: 1rem;
   color: var(--color-primary);
   border-radius: 10px;
   display: flex;
@@ -119,32 +126,159 @@ a:hover{
   justify-content: center;
 
 }
-.icons:hover{
-  background-color: #F8F7F7;
-  text-decoration: none;
-}
 
 .icon-row{
   display: flex;
 }
-/*notifications*/
-.notifications{
-  background-color: var(--color-black);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.noti-text{
-  margin: 0;
-  padding: 1rem;
-  font-size: 1.5rem;
-}
-.notifications:hover{
-  background-color: black;
+/**----------------Start Point------------------**/
+
+
+/**button**/
+button{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
+/**Button-Icon**/
+
+.btn-container{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-light-grey);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 4px;
+
+}
+.btn__nav{
+  width: 100%;
+  height: 100%;
+
+}
+.icons__nav{
+  color: var(--color-black);
+}
+
+/**Navigation Bar - disappearing list**/
+.nav-bar__modal{
+  background-color: var(--color-light-grey);
+}
+.linked-list__nav-bar{
+  padding: 2rem 2rem;
+  width: 100%;
+}
+.list-menu__nav-bar{
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item__nav{
+  font-weight: var(--weigth-med);
+  padding: 1rem 0;
+}
+a.linked-list:hover{
+  background-color: var(--color-light-black);
+  transition: background-color 1.5s ease;
+}
+
+/*modal*/
+.modal-close-btn{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal{
+  position: fixed; 
+  top: 0;  
+  left:0;
+  transition: 300ms ease-in-out;
+  transform:translate(0, -100vh);
+  z-index: 9999;
+  width: 100%;
+  min-height: 50vh;
+  max-height: 100vh;
+ }
+ .modal.active{
+     transform:translate(0);
+ }
+ #overlay{
+     position: fixed;
+     top:0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0.521);
+     pointer-events: none;
+     opacity: 0;
+     transition: 200ms ease-in-out;
+ }
+ 
+ #overlay.active{
+     pointer-events: all;
+     opacity: 1;
+ }
+
+/** Navigation Bar**/
+.logo__nav{
+  width: 80%;
+  max-width: 600px;
+}
+
+.navigation-bar, .logo-container__nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.open-menu__nav{
+  margin: 0 1rem ;
+}
+
+.bigger-screen__nav{
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn-container__nav{
+    display: none;
+  }
+  .bigger-screen__nav{
+    display: flex;
+    justify-content: center;
+    max-width: 30%;
+  }
+  .logo__nav{
+    width: 200px;
+  }
+  .logo-container__nav{
+    display: flex;
+    justify-content: left;
+  }
+  
+  .navigation-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1024px;
+  }
+  .linked-list__nav{
+    width: 100px;
+  }
+  a.linked-list:hover{
+    background:none;
+    text-decoration: underline;
+    transition: text-decoration 1.5s ease;
+  }
+}
+
+/**----------------mid Point------------------**/
  /*poster*/
  .poster__box{
    width: 348px;
@@ -304,6 +438,9 @@ a:hover{
   }
 }
 
+/*Navigation*/
+
+
 /*content-outline*/
 .poster__event{
   height: 100px;
@@ -413,115 +550,7 @@ footer{
   }
 }
 
-/*modal*/
-.event-catalogue{
-  margin: 2rem;
-  max-width: 500px;
-}
 
-.modal-poster{
-  padding: 2rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 300px;
-}
-#pop-up__btn{
-  background:none;
-  border: none;
-  cursor: pointer;
-  text-align: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  width: 100%;
-  max-height: 200px;
-  padding: inherit;
-  min-width: 300px;
-  color: var(--color-black);
-  
-}
-.modal-title{
-  margin: 0;
-  font-size: 3rem;
-}
-.modal-image{
-  width: 80%;
-  align-self: center;
-
-}
-.modal-main{
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.location{
-  margin: 2rem 0 2rem;
-}
-.price{
-  margin: 0;
-}
-.modal-date{
-  padding: 1rem;
-}
-
-.modal p{
-  font-weight: var(--weight-light);
-}
-
-.modal{
-  position: fixed; 
-  top: 50%;  
-  left: 50%;
-  transition: 200ms ease-in-out;
-  transform: translate(-50%, -50%) scale(0);
-  border: 2px solid var(--color-primary);
-  border-radius: 10px;
-  z-index: 9999;
-  background-color: white;
-  max-width: 80%;
-  width: 500px;
- }
- .modal.active{
-     transform: translate(-50%, -50%) scale(1);
- }
- 
- .modal-header{
-     padding: 2rem;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
- 
- .modal-header .close-button{
-     cursor: pointer;
-     border: none;
-     outline: none;
-     background:none;
-     color:var(--color-black);
-     font-size: 2.5rem;
-     font-weight: bold;
- }
- .modal-body{
-     padding: 2rem;
- }
- #overlay{
-     position: fixed;
-     top:0;
-     bottom: 0;
-     right: 0;
-     left: 0;
-     background-color: rgba(0, 0, 0, 0.493);
-     pointer-events: none;
-     opacity: 0;
-     transition: 200ms ease-in-out;
- }
- 
- #overlay.active{
-     pointer-events: all;
-     opacity: 1;
- }
 
 /*final*/
 .final-main{
