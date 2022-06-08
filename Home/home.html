@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/23f3d972ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/CSS/normalize.css" />
+    <link rel="stylesheet" href="/CSS/RefractoredStyles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <title>The Spark Magazine - Home</title>
+  </head>
+  <!---->
+  <body>
+    <article class="full-page">
+      <!--Hero Section-->
+      <section class="hero-section">
+        <!--navigation bar-->
+        <div class="navigation-bar">
+          <!--Logo for navigation bar-->
+          <div class="logo-container__nav">
+            <img
+              src="/images/Black and White logo.png"
+              alt="this is the logo of the Spark Magazine"
+              class="logo__nav"
+            />
+          </div>
+          <!--Bigger screen nav-->
+          <div class="bigger-screen__nav">
+            <div class="linked-list linked-list-container">
+              <ul class="list bigger-screen-list">
+                <a href="/Team/index.html" class="linked-list linked-list__nav"
+                  ><li class="list-item list__in-line">Team</li></a
+                ><a
+                  href="/About/index.html"
+                  class="linked-list linked-list__nav"
+                  ><li class="list-item list__in-line">About</li></a
+                ><a
+                  href="/Store/index.html"
+                  class="linked-list linked-list__nav"
+                  ><li class="list-item list__in-line">Store</li></a
+                >
+              </ul>
+            </div>
+          </div>
+
+          <!--Modal Nav Bar-->
+          <div class="btn-container btn-container__nav open-menu__nav">
+            <button
+              class="btn__nav"
+              data-modal-target="#modal"
+              id="pop-up__btn"
+            >
+              <i class="fas fa-bars icons icons__nav fa-2x"></i>
+            </button>
+          </div>
+          <div class="nav-bar__modal modal" id="modal">
+            <div class="btn-container btn-container__nav modal-close-btn">
+              <button data-close-button class="btn__nav close-button">
+                <i class="fas fa-times icons icons__nav fa-2x"></i>
+              </button>
+            </div>
+            <div class="linked-list linked-list__nav-bar">
+              <ul class="list list-menu__nav-bar">
+                <a href="/Team/index.html" class="linked-list"
+                  ><li class="list-item list__in-line list-item__nav">
+                    Team
+                  </li></a
+                ><a href="/About/index.html" class="linked-list"
+                  ><li class="list-item list__in-line list-item__nav">
+                    About
+                  </li></a
+                ><a href="/Store/index.html" class="linked-list"
+                  ><li class="list-item list__in-line list-item__nav">
+                    Store
+                  </li></a
+                >
+              </ul>
+            </div>
+          </div>
+          <div id="overlay"></div>
+        </div>
+        <!--end of nav bar-->
+        <!--baginning of hero carrousel-->
+        <!--Carrousel-autoscroll-->
+        <div class="carrousel-container">
+          <div class="carrousel">
+            <section class="carrousel-scroll hero-carrousel">
+              <!--Hero-article-->
+              <div class="hero-article">
+                <!--Tags-->
+                <div class="tags lifestyle">
+                  <p class="tag-text">Lifestyle</p>
+                </div>
+                <!--hero-image here-->
+                <img
+                  src="/images/Esihle.png"
+                  alt="An image of a black woman wearing yellow clothes"
+                  class="hero-image"
+                />
+                <div class="hero-text">
+                  <h2>Esihle</h2>
+                  <p>The Fourth Edition is out now!</p>
+                  <a href="/Articles/Guests/FourthEdition.html">Read more -></a>
+                </div>
+              </div>
+            </section>
+            <section class="carrousel-scroll hero-carrousel">
+              <!--Hero-article-->
+              <div class="hero-article">
+                <!--Tags-->
+                <div class="tags spiritual">
+                  <p class="tag-text">Spiritual</p>
+                </div>
+                <!--hero-image here-->
+                <img src="/images/Dreams 1.jpg" alt="" class="hero-image" />
+                <div class="hero-text">
+                  <h2>Dreams VS Attitude</h2>
+                  <p>How Attitude affects your ability to chase your Dreams</p>
+                  <a
+                    href="/Articles/OtherArticles/Fourth Edition - Dreams vs Attitude.html"
+                    >Read more -></a
+                  >
+                </div>
+              </div>
+            </section>
+            <section class="carrousel-scroll hero-carrousel">
+              <!--Hero-article-->
+              <div class="hero-article">
+                <!--Tags-->
+                <div class="tags issues">
+                  <p class="tag-text">Issues</p>
+                </div>
+                <!--hero-image here-->
+                <img
+                  src="/images/Women's rights.jpg"
+                  alt=""
+                  class="hero-image"
+                />
+                <div class="hero-text">
+                  <h2>Womens right's</h2>
+                  <p>A National Emergency!</p>
+                  <a href="/Articles/OtherArticles/fourthEd-Women's rights.html"
+                    >Read more -></a
+                  >
+                </div>
+              </div>
+            </section>
+            <section class="carrousel-scroll hero-carrousel">
+              <!--Hero-article-->
+              <div class="hero-article">
+                <!--Tags-->
+                <div class="tags advertisement">
+                  <p class="tag-text">Advertisement</p>
+                </div>
+                <!--hero-image here-->
+                <img
+                  src="/images/PrideMonth.png"
+                  alt="a picture showing that it is pride month"
+                  class="hero-image"
+                />
+                <div class="hero-text">
+                  <h2>Pride Month</h2>
+                  <p>The Spark Magazine celebrates with you Pride Month</p>
+                  <a href="https://www.loc.gov/lgbt-pride-month/about/"
+                    >Read more -></a
+                  >
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </article>
+  </body>
+  <script src="/javaScript/modal.js"></script>
+</html>
