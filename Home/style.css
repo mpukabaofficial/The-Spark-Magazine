@@ -11,7 +11,7 @@
   --color-light-black:#8F8E8E;
   --color-light-grey:#f5f5f5;
   --color-white:#fff;
-  --color-lifestyle:#EFAAC4;
+  --color-pearlS:#EFAAC4;
   --color-health:#B0DB43;
   --color-ad:red;
   --color-color1:#CF5C36;
@@ -137,4 +137,24 @@ button{
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+/**Banner**/
+.banner{
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.themed{
+  background-color: #000000;
+}
+.pearlS{
+  background-color: var(--color-pearlS);
+}
+.banner p {
+  color: white;
+  margin: 0.5rem 1rem;
+  font-size: 1rem;
 }
