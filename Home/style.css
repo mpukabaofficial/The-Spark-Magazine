@@ -193,3 +193,8 @@ button{
 }
 
 /**Hero section**/
+.socials{
+  color: var(--color-secondary);
+  width: 100%;
+  display: flex;
+}
