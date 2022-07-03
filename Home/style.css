@@ -126,3 +126,15 @@ button{
 .article-type{
   justify-content: center;
 }
+
+/**Imageholder**/
+.headline-imageholder{
+  width: 100%;
+  border: 1px solid green;
+ 
+}
+.headline-image{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
