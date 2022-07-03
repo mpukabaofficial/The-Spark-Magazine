@@ -109,3 +109,20 @@ button{
   border-radius: 20px;
 }
 
+/**article info**/
+.info-container{
+  height: 30%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.article-info, .article-date__container, .article-type{
+  display: flex;
+  align-content: center;
+  margin: 0 1rem;
+}
+.article-type{
+  justify-content: center;
+}
