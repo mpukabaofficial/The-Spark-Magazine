@@ -88,3 +88,12 @@ button{
   color: var(--color-accent);
   border: 3px solid var(--color-accent);
 }
+
+/**logo**/
+.logo-container{
+  max-width: 50vw;
+  border: 1px solid green;
+}
+.logo-image{
+  max-width: 100%;
+}
