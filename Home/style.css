@@ -131,6 +131,7 @@ button{
 .headline-imageholder{
   width: 100%;
   border: 1px solid green;
+  height: 100%;
  
 }
 .headline-image{
@@ -166,4 +167,29 @@ button{
   align-items: center;
   margin: 0 1rem;
   min-height: 30%;
+  position: absolute;
+  bottom: 1rem;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4);
+  width: 100%;
 }
+.element-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.hero-text{
+  margin:1rem;
+  color: white;
+}
+
+/**Hero section**/
