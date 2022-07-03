@@ -72,14 +72,19 @@ button{
   outline: none;
   border: none;
   cursor: pointer;
-}
-.btn__solid{
-  padding: 1rem;
-  font-weight: var(--weigth-med);
+  padding: 1rem 2rem;
   
-
 }
-.btn--accent{
+.btn{
+  font-size: 2rem;
+  border-radius: 10px;
+  font-weight: var(--weigth-med);
+}
+.btn--accent__solid{
   color: var(--color-white);
   background-color: var(--color-accent);
+}
+.btn--accent__outline{
+  color: var(--color-accent);
+  border: 3px solid var(--color-accent);
 }
