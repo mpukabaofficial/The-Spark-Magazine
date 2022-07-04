@@ -113,3 +113,26 @@
     color: var(--color-accent);
     border: 3px solid var(--color-accent);
   }
+
+/**cover picture hero**/
+.cover-image__container{
+  width: 100vw;
+  height: 35vh;
+  position: relative;
+ }
+.cover-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  }
+
+/**audio**/
+audio{
+  width: 200px;
+}
+.audio{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+}

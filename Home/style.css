@@ -118,6 +118,9 @@ button{
 /**logo**/
 .logo-container{
   max-width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .logo-image{
   max-width: 100%;
