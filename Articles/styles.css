@@ -35,7 +35,7 @@
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
-  
+ 
   
   /**Typography**/
   
@@ -123,6 +123,9 @@
   align-items: center;
   background-color: rgb(240, 240, 240);
   border-radius: 20px;
+}
+.icons:hover{
+  background-color: rgb(211, 211, 211);
 }
 
 /**cover picture hero**/
@@ -342,6 +345,7 @@ input[type="text"]
   bottom: 0;
   position: fixed;
   background-color: white;
+  z-index: 9999;
 }
 
 
@@ -353,4 +357,28 @@ input[type="text"]
   position: relative;
   display: grid;
   grid-template-rows: 19fr 1fr;
+  z-index: 99;
+}
+
+/**modal**/
+#closePopUp{
+  color: rgb(221, 0, 0);
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.modal-container{
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+.modal-container.show{
+  opacity: 1;
+  pointer-events: auto;
 }
