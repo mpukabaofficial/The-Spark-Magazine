@@ -286,6 +286,7 @@ article p{
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
 }
 .commment__container{
   border-bottom: 1px solid lightgray;
