@@ -305,7 +305,7 @@ input{
   font-size: 40px;
   outline:none;
   border: none;
-  border-bottom: 1px solid grey;
+  
   padding: 1rem;
   font-size: 15px;
   max-height: 200px;
@@ -335,4 +335,22 @@ input[type="text"]
 .comment-input{
   display: grid;
   grid-template-columns: 9fr 1fr;
+  margin-top: 3rem;
+  border-top: 1px solid grey;
+  box-shadow: 0 0 100px 0.1px rgba(68, 68, 68, 0.315);
+  position: absolute;
+  bottom: 0;
+  position: fixed;
+  background-color: white;
+}
+
+
+/**comment interface**/
+.comment-interface{
+  width: 100%;
+  /**change from vh to %**/
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 19fr 1fr;
 }
