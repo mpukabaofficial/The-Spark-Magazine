@@ -230,3 +230,43 @@ nav{
   border-bottom: 0.5px solid var(--color-color2);
   
 }
+
+/**navigation**/
+.article-title{
+  padding: 0 1rem;
+  text-align: center;
+}
+.article-date{
+  font-style: italic;
+  color: rgb(83, 169, 255);
+}
+.article-start{
+  font-weight: var(--weigth-med);
+}
+.articles{
+  font-family: 'EB Garamond', serif;
+}
+article p{
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+.quote{
+  width: 100%;
+  padding: 2rem;
+}
+.black{
+  background-color: black;
+}
+.quote.dark p{
+  color: white;
+  font-style: italic;
+}
+.quote.light p{
+  color: black;
+}
+.article-images{
+  height: 200px;
+  margin: 2rem 0;
+  object-position: center;
+  max-width: 500px;
+}
