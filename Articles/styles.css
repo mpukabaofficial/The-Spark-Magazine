@@ -185,6 +185,7 @@ audio{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .top-bar{
   display: flex;
@@ -208,8 +209,24 @@ audio{
 .comment{
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment-btn__container{
+  margin: 0 5rem;
 }
 /**hero**/
 .hero{
   position: relative;
+}
+
+/**navigation**/
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 0 0;
+  border-bottom: 0.5px solid var(--color-color2);
+  
 }
