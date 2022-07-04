@@ -24,8 +24,11 @@ const db = getFirestore()
 // collection ref
 const colRef = collection(db, "4Ed_Intro_comments")
 
+// queries
+// const q = query(colRef, where("status", "==", "active"))
+
 // get collection data
-  onSnapshot(colRef, (snapshot) => {
+  onSnapshot(db, (snapshot) => {
     let comments = []
     snapshot.docs.forEach((doc) => {
         comments.push({...doc.data(), id: doc.id})
@@ -41,7 +44,8 @@ addCommentForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
   addDoc(colRef, {
-    comment: addCommentForm.comment.value
+    comment: addCommentForm.comment.value,
+    status: "active"
   })
   .then(() =>{
     addCommentForm.reset()
@@ -50,17 +54,17 @@ addCommentForm.addEventListener('submit', (e) => {
 })
 
 // delete document
-const deleteCommentForm = document.querySelector('.delete')
-deleteCommentForm.addEventListener('submit', (e) => {
-  e.preventDefault()
+// const deleteCommentForm = document.querySelector('.delete')
+// deleteCommentForm.addEventListener('submit', (e) => {
+//   e.preventDefault()
 
-  const docRef = doc(db, "4Ed_Intro_comments", deleteCommentForm.id.value)
+//   const docRef = doc(db, "4Ed_Intro_comments", deleteCommentForm.id.value)
 
-  deleteDoc(docRef)
-  .then(() =>{
-    deleteCommentForm.reset()
-})
-})
+//   deleteDoc(docRef)
+//   .then(() =>{
+//     deleteCommentForm.reset()
+// })
+// })
 
 //generate comment
 function generateComments(comments){
@@ -86,9 +90,9 @@ function generateComments(comments){
 }
 
 function createEventListeners(){
-    let allComments = document.querySelector(".commment__container .delete-btn")
+    let allActiveComments = document.querySelectorAll(".commment__container .delete-btn__container")
     console.log(allActiveComments)
-    allComments.forEach((activeComment) => {
+    allActiveComments.forEach((activeComment) => {
         activeComment.addEventListener(("click"), function(){
             deleteComment()
         })
@@ -96,5 +100,5 @@ function createEventListeners(){
 }
 
 function deleteComment(){
-    console.log("delete Comment")
+   
 }
