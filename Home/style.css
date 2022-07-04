@@ -151,11 +151,14 @@ button{
 iframe{
   height: 100%;
   width: 100%;
+  
 }
 @media screen and (min-width:768px) {
   iframe{
     height: 100%;
     width: 100%;
+    position: absolute;
+  z-index: 99;
   }
 }
 
@@ -334,35 +337,38 @@ iframe{
   0%{
     transform: translate(0, 0);
   }
- 3%{
-  transform: translate(-100vw, 0);
+ 15%{
+  transform: translate(0, 0);
  }
- 20%{
-  transform: translate(-100vw, 0);
+ 17%{
+  transform: translate(-100%, 0);
  }
- 23%{
-  transform: translate(-200vw, 0);
+ 32%{
+  transform: translate(-100%, 0);
  }
- 40%{
-  transform: translate(-200vw, 0);
+ 34%{
+  transform: translate(-200%, 0);
  }
- 43%{
-  transform: translate(-300vw, 0);
+ 49%{
+  transform: translate(-200%, 0);
  }
- 60%{
-  transform: translate(-300vw, 0);
+ 51%{
+  transform: translate(-300%, 0);
  }
- 63%{
-  transform: translate(-400vw, 0);
+ 66%{
+  transform: translate(-300%, 0);
  }
- 80%{
-  transform: translate(-400vw, 0);
+ 68%{
+  transform: translate(-400%, 0);
  }
  83%{
-  transform: translate(-500vw, 0);
+  transform: translate(-400%, 0);
+ }
+ 85%{
+  transform: translate(-500%, 0);
  }
  100%{
-  transform: translate(-500vw, 0);
+  transform: translate(-500%, 0);
  }
 }
 
@@ -383,42 +389,6 @@ iframe{
     width: 1024px;
     overflow-x: hidden;
     height: 60vh;
-  }
-
-  @keyframes carrousel {
-    0%{
-      transform: translate(0, 0);
-    }
-   3%{
-    transform: translate(-100%, 0);
-   }
-   20%{
-    transform: translate(-100%, 0);
-   }
-   23%{
-    transform: translate(-200%, 0);
-   }
-   40%{
-    transform: translate(-200%, 0);
-   }
-   43%{
-    transform: translate(-300%, 0);
-   }
-   60%{
-    transform: translate(-300%, 0);
-   }
-   63%{
-    transform: translate(-400%, 0);
-   }
-   80%{
-    transform: translate(-400%, 0);
-   }
-   83%{
-    transform: translate(-500%, 0);
-   }
-   100%{
-    transform: translate(-500%, 0);
-   }
   }
 }
 
