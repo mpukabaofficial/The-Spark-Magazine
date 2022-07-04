@@ -196,3 +196,12 @@ audio{
     justify-content: space-between;
   }
 }
+
+/**comment button**/
+.fa-comment{
+  color: dodgerblue;
+}
+.comment{
+  width: 100%;
+  height: 100%;
+}
