@@ -231,7 +231,7 @@ nav{
   
 }
 
-/**navigation**/
+/**article**/
 .article-title{
   padding: 0 1rem;
   text-align: center;
@@ -269,4 +269,70 @@ article p{
   margin: 2rem 0;
   object-position: center;
   max-width: 500px;
+}
+
+/**comment**/
+.fa-trash-alt{
+  color: rgb(235, 0, 0);
+  margin: 0 0 1rem;
+}
+
+.delete-btn{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commment__container{
+  border-bottom: 1px solid lightgray;
+  margin-top: 1rem;
+  max-width: 90%;
+  margin: auto;
+}
+.comment-text{
+  padding: 1rem 2rem;
+}
+
+.comment-text p{
+  color: rgb(90, 90, 90);
+}
+
+/**input comment**/
+input{
+  min-height: 50px;
+  width: 100%;
+  font-size: 40px;
+  outline:none;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 1rem;
+  font-size: 15px;
+  max-height: 200px;
+}
+
+input[type="text"]
+{
+    font-size:15px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: grey;
+  font-size: 15px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: grey;
+  font-size: 15px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: grey;
+  font-size: 15px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: grey;
+  font-size: 15px;
+}
+.comment-input{
+  display: grid;
+  grid-template-columns: 9fr 1fr;
 }
