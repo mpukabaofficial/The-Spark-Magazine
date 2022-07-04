@@ -35,8 +35,15 @@
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
- 
-  
+
+  body{
+    width: 100vw;
+  }
+  .fit-to-screen{
+    max-width: 1024px;
+    margin: auto;
+  }
+
   /**Typography**/
   
   body h1{
@@ -269,7 +276,7 @@ article p{
 }
 .article-images{
   height: 200px;
-  margin: 2rem 0;
+  margin: 3rem auto;
   object-position: center;
   max-width: 500px;
 }
@@ -381,4 +388,12 @@ input[type="text"]
 .modal-container.show{
   opacity: 1;
   pointer-events: auto;
+}
+
+/* article colors */
+.intro-blue{
+  background-color: #5E79C6;
+}
+.intro-red{
+  background-color: #AE0F0C;
 }
