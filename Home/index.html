@@ -40,7 +40,7 @@
       <div class="container__carrousel">
         <div class="flexible-container">
           <div class="info-container__hero">
-            <a href="/Articles/themed/4Ed_intro.html"
+            <a href="#"
               ><div class="element-container">
                 <div class="banner upcoming hero-banner">
                   <p class="banner-text">upcoming</p>
@@ -56,6 +56,23 @@
               </div></a
             >
           </div>
+          <div class="info-container__hero">
+            <a href="/Articles/FromOtherEditions/1ed_Business.html"
+              ><div class="element-container">
+                <div class="banner first-edition hero-banner">
+                  <p class="banner-text">First Edition</p>
+                </div>
+                <div class="headline-imageholder">
+                  <img src="/images/image-businessPlan.webp" alt="A picture with a business blueprint" class="headline-image" />
+                </div>
+                <div class="info-hero">
+                  <p class="hero-text">
+                    Business in eSwatini: A testimonial.
+                  </p>
+                </div>
+              </div></a
+            >
+            </div>
           <div class="info-container__hero">
             <a href="/Articles/FromOtherEditions/FirstEdition/1Ed_Unemployment.html"
               ><div class="element-container">
@@ -124,23 +141,7 @@
               </div></a
             >
           </div>
-          <div class="info-container__hero">
-            <a href="/Articles/themed/1Ed_Intro.html"
-              ><div class="element-container">
-                <div class="banner first-edition hero-banner">
-                  <p class="banner-text">First Edition</p>
-                </div>
-                <div class="headline-imageholder">
-                  <img src="/images/eswatini-ribbon.webp" alt="a picture of a ribbon stampped with the swazi flag" class="headline-image" />
-                </div>
-                <div class="info-hero">
-                  <p class="hero-text">
-                   Introduction of the First Edition. We remember where we started.
-                  </p>
-                </div>
-              </div></a
-            >
-            </div>
+         
         </div>
       </div>
     </section>
@@ -149,19 +150,40 @@
       <p class="fine-print"> Filter Articles</p>
       <div class="typeOfArticles-container">
         <button onclick="filterObjects('all')" class="typeOfArticle__btn all">Show All</button>
-        <button onclick="filterObjects('themed-article')" class="typeOfArticle__btn themed">themed</button>
+        <button onclick="filterObjects('themed-article')" class="typeOfArticle__btn themed">Themed</button>
         <button onclick="filterObjects('cover-article')" class="typeOfArticle__btn cover">Cover</button>
         <button onclick="filterObjects('pearlS-article')" class="typeOfArticle__btn pearlS">Pearl S.</button>
         <button onclick="filterObjects('social-justice-article')" class="typeOfArticle__btn social-justice">social-justice</button>
+        <button onclick="filterObjects('business-article')" class="typeOfArticle__btn business">Business</button>
         <button onclick="filterObjects('spiritual-article')" class="typeOfArticle__btn spiritual">Spiritual</button>
         <button onclick="filterObjects('first-edition-article')" class="typeOfArticle__btn first-edition">First Edition</button>
         <button onclick="filterObjects('articles-only')" class="typeOfArticle__btn articles-banner">Articles</button>
-        <button onclick="filterObjects('ads-only')" class="typeOfArticle__btn ads-banner">ADs</button>
+        <button onclick="filterObjects('ads-only')" class="typeOfArticle__btn ads-elements">ADs</button>
+        
       </div>
     </section>
     <!--headlines-->
     <section class="headlines-section fit-to-screen">
       <div class="headlines">
+        <div  class="headline articles-only first-edition-article business-article">
+          <a href="/Articles/FromOtherEditions/1ed_Business.html" class="headline-links">
+            <div class="headline-imageholder">
+              <img src="/images/image-businessPlan.webp" alt="" class="headline-image" />
+            </div>
+            <div class="info-container">
+              <div class="article-info"><p>Business in eSwatini: A testimonial.</p></div>
+              <div class="article-date__container">
+                <p class="article-date">July 18, 2022</p>
+              </div>
+              <div class="article-type">
+                <p class="fine-print">Article</p>
+              </div>
+            </div>
+          </a>
+          <div class="banner first-edition hero-banner">
+            <p class="banner-text">First Edition</p>
+          </div>
+        </div>
         <div  class="headline articles-only first-edition-article">
           <a href="/Articles/FromOtherEditions/FirstEdition/1Ed_Unemployment.html" class="headline-links">
             <div class="headline-imageholder">

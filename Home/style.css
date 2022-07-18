@@ -16,9 +16,9 @@
   --color-health: #b0db43;
   --color-upcoming: #00be70;
   --color-first-edition: gold;
-  --color-ad: red;
   --color-cover: #b411b4;
   --color-articles: #cf5c36;
+  --color-ads: red;
   --color-color1: #2d3142;
   --color-spiritual: #000000;
   --color-social-justice: linear-gradient(
@@ -47,8 +47,6 @@ html {
   font-weight: var(--weight-reg);
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
-}
-body {
 }
 
 /**Typography**/
@@ -317,8 +315,11 @@ iframe {
 .articles-banner {
   background-color: var(--color-articles);
 }
-.ads-banner {
-  background-color: var(--color-ad);
+.ads-elements {
+  background: var(--color-ads);
+}
+.business {
+  background-color: var(--color-color1);
 }
 
 .banner p {
@@ -486,9 +487,7 @@ iframe {
   max-width: 1024px;
 }
 
-/* end of styling----------------------------------------------- */
-
-/* type of article functionality */
+/* filter functionality */
 .show {
   display: block;
 }
@@ -515,13 +514,25 @@ iframe {
   max-width: 150px;
   min-width: 100px;
   overflow: hidden;
-  height: 100%;
+  max-height: 30px;
   padding: 1rem;
   border-radius: 10px;
 }
 .all {
   background-color: var(--color-accent);
 }
+@media screen and (min-width: 768px) {
+  .typeOfArticles-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .typeOfArticles-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+/* end of styling----------------------------------------------- */
 
 /* Announcing new article */
 
