@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/CSS/normalize.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <script
       src="https://kit.fontawesome.com/23f3d972ad.js"
       crossorigin="anonymous"
@@ -43,9 +42,44 @@
             <a href="#"
               ><div class="element-container">
                 <div class="banner upcoming hero-banner">
-                  <p class="banner-text">upcoming</p>
+                  <p class="banner-text">Upcoming</p>
                 </div>
-                <div class="headline-imageholder">
+                <div class="carrousel-imageholder">
+                  <img src="/images/image-wildlifeEswatini.webp" alt="a black women with a blue eye" class="headline-image" />
+                </div>
+                <div class="info-hero">
+                  <p class="hero-text">
+                    Vision 2022: Humble and Attainable | Part 3
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <div class="info-container__hero">
+            <a href="/Articles/FromOtherEditions/SecondEdition/2ed_pearlS.html"
+              ><div class="element-container">
+                <div class="banner pearlS hero-banner">
+                  <p class="banner-text">Pearl S.</p>
+                </div>
+                <div class="carrousel-imageholder">
+                  <img src="/images/image-manSilhoutte.webp" alt="A picture with a business blueprint" class="headline-image" />
+                </div>
+                <div class="info-hero">
+                  <p class="hero-text">
+                    SUCCESS IS THE CHILD OF SELF-DISCIPLINE <br>“Discipline is choosing between what you want now, and what you want the most.” ~Abraham Lincoln 
+                    
+                  </p>
+                </div>
+              </div></a
+            >
+            </div>
+          <div class="info-container__hero">
+            <a href="/Articles/themed/4ed_Vision2022_Part2.html"
+              ><div class="element-container">
+                <div class="banner themed hero-banner">
+                  <p class="banner-text">themed</p>
+                </div>
+                <div class="carrousel-imageholder">
                   <img src="/images/image-mbabaneHilton.webp" alt="the Swazi Flag" class="headline-image" />
                 </div>
                 <div class="info-hero">
@@ -56,47 +90,15 @@
               </div></a
             >
           </div>
-          <div class="info-container__hero">
-            <a href="/Articles/FromOtherEditions/1ed_Business.html"
-              ><div class="element-container">
-                <div class="banner first-edition hero-banner">
-                  <p class="banner-text">First Edition</p>
-                </div>
-                <div class="headline-imageholder">
-                  <img src="/images/image-businessPlan.webp" alt="A picture with a business blueprint" class="headline-image" />
-                </div>
-                <div class="info-hero">
-                  <p class="hero-text">
-                    Business in eSwatini: A testimonial.
-                  </p>
-                </div>
-              </div></a
-            >
-            </div>
-          <div class="info-container__hero">
-            <a href="/Articles/FromOtherEditions/FirstEdition/1Ed_Unemployment.html"
-              ><div class="element-container">
-                <div class="banner first-edition hero-banner">
-                  <p class="banner-text">First Edition</p>
-                </div>
-                <div class="headline-imageholder">
-                  <img src="/images/image-aBlackVendor.webp" alt="a black women with a blue eye" class="headline-image top-image" />
-                </div>
-                <div class="info-hero">
-                  <p class="hero-text">
-                    Unemployment: the story of Hope. <br>“They are doing the same duties in schools but are shamefully paid half.”
-                  </p>
-                </div>
-              </div></a
-            >
-          </div>
+          
+          
           <div class="info-container__hero">
             <a href="/Articles/themed/4Ed_PearlS.html"
               ><div class="element-container">
                 <div class="banner pearlS hero-banner">
                   <p class="banner-text">Pearl S</p>
                 </div>
-                <div class="headline-imageholder">
+                <div class="carrousel-imageholder">
                   <img src="/images/Pearl S.webp" alt="a picture with a hand raised to the sky" class="headline-image" />
                 </div>
                 <div class="info-hero">
@@ -104,8 +106,8 @@
                     Pearl S. : Life is what you Believe.
                   </p>
                 </div>
-              </div></a
-            >
+              </div>
+            </a>
           </div>
           <div class="info-container__hero">
             <a href="/Articles/themed/4Ed_Vision2022-Part1.html"
@@ -113,7 +115,7 @@
                 <div class="banner themed hero-banner">
                   <p class="banner-text">Themed</p>
                 </div>
-                <div class="headline-imageholder">
+                <div class="carrousel-imageholder">
                   <img src="/images/Vision2022.webp" alt="new york skyline" class="headline-image" />
                 </div>
                 <div class="info-hero">
@@ -130,7 +132,7 @@
                 <div class="banner cover hero-banner">
                   <p class="banner-text">Cover</p>
                 </div>
-                <div class="headline-imageholder">
+                <div class="carrousel-imageholder">
                   <img src="/images/image-esihle standing.jpg" alt="a picture of a wowman wearing a yellow dress standing up" class="headline-image top-image">
                 </div>
                 <div class="info-hero">
@@ -157,6 +159,7 @@
         <button onclick="filterObjects('business-article')" class="typeOfArticle__btn business">Business</button>
         <button onclick="filterObjects('spiritual-article')" class="typeOfArticle__btn spiritual">Spiritual</button>
         <button onclick="filterObjects('first-edition-article')" class="typeOfArticle__btn first-edition">First Edition</button>
+        <button onclick="filterObjects('second-edition-article')" class="typeOfArticle__btn second-edition">Second Edition</button>
         <button onclick="filterObjects('articles-only')" class="typeOfArticle__btn articles-banner">Articles</button>
         <button onclick="filterObjects('ads-only')" class="typeOfArticle__btn ads-elements">ADs</button>
         
@@ -165,8 +168,43 @@
     <!--headlines-->
     <section class="headlines-section fit-to-screen">
       <div class="headlines">
+        <div class="headline pearlS-article articles-only second-edition-article main-headline">
+          <a href="/Articles/FromOtherEditions/SecondEdition/2ed_pearlS.html" class="headline-links" >
+            <div class="headline-imageholder">
+              <img src="/images/image-manSilhoutte.webp" alt="" class="headline-image" />
+            </div>
+            <div class="info-container">
+              <div class="article-info"><p>SUCCESS IS THE CHILD OF SELF-DISCIPLINE</p></div>
+              <div class="article-date__container">
+                <p class="article-date">August 2, 2022</p>
+              </div>
+              <div class="article-type">
+                <p class="fine-print">Article</p>
+              </div>
+            </div>
+          </a>
+          <div class="banner second-edition hero-banner">
+            <p class="banner-text">Second Edition</p>
+          </div>
+        </div>
+        <div class="headline themed-article articles-only">
+          <a href="/Articles/themed/4ed_Vision2022_Part2.html" class="headline-links" >
+            <div class="headline-imageholder">
+              <img src="/images/image-mbabaneHilton.webp" alt="" class="headline-image" />
+            </div>
+            <div class="info-container">
+              <div class="article-info"><p>Vision 2022: Let's get real and pragmatic|Part 2</p></div>
+              <div class="article-date__container">
+                <p class="article-date">July 22, 2022</p>
+              </div>
+              <div class="article-type">
+                <p class="fine-print">Article</p>
+              </div>
+            </div>
+          </a>
+        </div>
         <div  class="headline articles-only first-edition-article business-article">
-          <a href="/Articles/FromOtherEditions/1ed_Business.html" class="headline-links">
+          <a href="/Articles/FromOtherEditions/FirstEdition/1ed_Business.html" class="headline-links">
             <div class="headline-imageholder">
               <img src="/images/image-businessPlan.webp" alt="" class="headline-image" />
             </div>
@@ -329,10 +367,10 @@
             </div>
           </a>
         </div>
-        <div class="headline themed-article cover-article articles-only">
+        <div class="headline themed-article cover-article articles-only guest-headline">
           <a href="/Articles/Guests/4Ed_Esihle.html" class="headline-links">
             <div class="headline-imageholder">
-              <img src="/images/image-esihle standing.jpg" alt="a woman wearing a yellow dress standing" class="headline-image" />
+              <img src="/images/image-esihle standing.jpg" alt="a woman wearing a yellow dress standing" class="headline-image top-image" />
             </div>
             <div class="info-container">
               <div class="article-info"><p>Esihle and The Girlies Closet</p></div>
@@ -417,4 +455,5 @@
   </body>
   <script src="/javaScript/Homepage.js"></script>
   <!-- <script src="/javaScript/Announcements.js"></script> -->
+  <script src="/javaScript/lightDark.js"></script>
 </html>

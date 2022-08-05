@@ -1,12 +1,17 @@
 filterObjects("all");
 function filterObjects(c) {
-  let x, i;
+  let headlineCard, indexOfheadline;
 
-  x = document.getElementsByClassName("headline");
+  headlineCard = document.getElementsByClassName("headline");
   if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+  for (
+    indexOfheadline = 0;
+    indexOfheadline < headlineCard.length;
+    indexOfheadline++
+  ) {
+    removeClass(headlineCard[indexOfheadline], "show");
+    if (headlineCard[indexOfheadline].className.indexOf(c) > -1)
+      addClass(headlineCard[indexOfheadline], "show");
   }
 }
 
@@ -28,3 +33,5 @@ function removeClass(element, name) {
   }
   element.className = arr.join(" ");
 }
+
+// show selected button
