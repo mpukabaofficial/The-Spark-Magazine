@@ -51,6 +51,9 @@ html {
   font-family: "Playfair Display", serif;
   overflow-x: hidden;
 }
+body {
+  position: relative;
+}
 
 /**Typography**/
 
@@ -74,6 +77,7 @@ p {
   font-size: 1.2rem;
   color: var(--color-light-black);
   text-transform: uppercase;
+  transition: all 250ms;
 }
 .white {
   color: white;
@@ -184,7 +188,6 @@ iframe {
   width: 80%;
   max-width: 400px;
   position: relative;
-  display: none;
   border-bottom: 0.5px solid lightgray;
   overflow: hidden;
 }
@@ -417,6 +420,11 @@ iframe {
   .container__carrousel {
     min-height: 456px;
   }
+  .guest-headline .hero-banner {
+    position: absolute;
+    top: 1rem;
+    left: 11rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -494,12 +502,9 @@ iframe {
   max-width: 1024px;
 }
 
-/* filter functionality */
-.show {
-  display: block;
-}
+/* edition Menu */
 
-.typeOfArticle {
+.editions {
   margin: 2rem 0;
   background-color: whitesmoke;
   width: 100%;
@@ -508,35 +513,66 @@ iframe {
   flex-direction: column;
   padding: 2rem 0;
 }
-.typeOfArticles-container {
+
+.editions-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 30px;
   gap: 1rem;
   padding: 1rem;
   flex-wrap: wrap;
   max-width: 1024px;
 }
-.typeOfArticle__btn {
-  color: white;
-  max-width: 150px;
-  min-width: 100px;
-  overflow: hidden;
-  max-height: 30px;
-  padding: 1rem;
-  border-radius: 10px;
-}
-.all {
-  background-color: var(--color-accent);
-}
-@media screen and (min-width: 768px) {
-  .typeOfArticles-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
+
+a .fine-print:hover {
+  color: var(--color-black);
 }
 
-@media screen and (min-width: 1024px) {
-  .typeOfArticles-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+/* Form request */
+.form-request {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #00be70;
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  padding: 1rem;
+  transform: scale(0);
+  animation: zoom 30s linear 2s 1 normal;
+}
+.form-request a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 /* end of styling----------------------------------------------- */
