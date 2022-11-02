@@ -481,3 +481,27 @@ input[type="text"] {
 .top-crop {
   object-position: top;
 }
+
+/* inteviwee */
+.felix {
+  background-color: #ede6f2;
+}
+.msomi {
+  background-color: #b8b8b8;
+}
+.felix,
+.msomi {
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.055);
+}
+
+p a:link,
+p a,
+p a:visited {
+  color: dodgerblue;
+}
+
+blockquote {
+  margin: auto;
+}
