@@ -1,4 +1,6 @@
 <section class="hero fit-to-screen">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="s6AQgQiD"></script>
     <div class="logo-container">
       <a href="/Home/index.html" class="logo-link">
         <img
@@ -22,9 +24,7 @@
       <a href="mailto:mpukaba.official@gmail.com"><div class="icons"><i class="fas fa-envelope icon fa-2x"></i></div></a>
     </div>
     <div class="comment-btn__container icons">
-      <button class="comment" id="popUp">
-        <i class="fas fa-comment fa-2x"></i>
-      </button>
+      <a href="#comments" class="comment"><i class="fas fa-comment fa-2x"></i></a>
     </div>     
 </nav>
   <article class="articles fit-to-screen">
@@ -49,6 +49,16 @@
 
     <div class="article-images">
       <img src="/images/image-a spark.webp" alt="" class="cover-image" />
+    </div>
+
+    <div class="comment-header" >
+      <h3 id="comments">
+        Thank you for reading and please leave a comment below!
+      </h3>
+    </div>
+
+    <div class="comments-container" >
+      <div class="fb-comments" data-href="https://thesparkeswatini.com" data-width="" data-numposts="100"></div>
     </div>
 
    

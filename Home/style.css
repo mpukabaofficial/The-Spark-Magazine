@@ -304,6 +304,10 @@ iframe {
   background-color: #ff5b00;
 }
 
+.third-edition {
+  background-color: rgb(182, 27, 143);
+}
+
 .banner p {
   color: white;
   margin: 0.5rem 1rem;

@@ -482,6 +482,32 @@ input[type="text"] {
   object-position: top;
 }
 
+/* instagram Embdedded */
+.instagram {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fb Comments */
+.comment-header {
+  margin: 10rem 0 1rem;
+  border-top: 1px solid var(--color-light-black);
+}
+.comment-header h3 {
+  max-width: 600px;
+}
+.comments-container,
+.comment-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fb-comments {
+  margin: auto;
+}
+
 /* inteviwee */
 .felix {
   background-color: #ede6f2;
