@@ -48,6 +48,23 @@ function getTimeElapsed(start, end) {
 
 const spotlightList = [
   {
+    name: "Ngidi",
+    picture:
+      "src='/images/FifthEdition/YoungPeopleOnTheMove/MpenduloNgidi/5ED_MpenduloNgidi_main.jpg'",
+    fullname: "Mpendulo Ngidi",
+    industry: "Entrepreneur, Brand, Soccer, Sports",
+    details: `By far one of the most talented, industrious midfielders Eswatini has ever 
+    witnessed, most sports fundis would agree with me that Ngidi is a marvel to watch, his
+    stylish displays in the soccer field makes one to not regret purchasing the matchday ticket.
+     The fact that he is still yet to represent the senior national team with pride is still a
+     mystery. It goes without any iota of doubt that the name “Mpendulo Ngidi” will forever be
+     engraved in memories of soccer supporters especially those who hail from the Lubombo
+     region after being the captain of the Titanic “Tambuti” ship which sailed into the MTN
+     Premier league after an absence of over a decade in the premiership.  `,
+    link: "href='/Articles/FromOtherEditions/FifthEdition/5ED_MpenduloNgidi.html'",
+    date: new Date("2023-09-16T01:56:00"),
+  },
+  {
     name: "Urcousinphayo",
     picture:
       "src='/images/FifthEdition/YoungPeopleOnTheMove/Urcousinphayo/5ED_Urcousinphayo_main.jpg'",

@@ -210,7 +210,9 @@ footer {
   border-radius: 35px;
 }
 .spotlight-picture {
-  width: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .spotlight-details {
   width: 100%;

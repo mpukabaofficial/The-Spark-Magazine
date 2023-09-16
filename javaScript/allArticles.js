@@ -35,6 +35,21 @@ export const headlines = [
   {
     tag: tags.spotlight,
     picture: picturePath(
+      "/images/FifthEdition/YoungPeopleOnTheMove/MpenduloNgidi/5ED_MpenduloNgidi_main.jpg"
+    ),
+    pictureDesc: photoDescription("a man wearing a hoodie"),
+    articleInfo:
+      "FROM THE SOCCER PITCH TO NAVIGATING THE FASHION WORLD:THE UNTOLD STORY OF MPENDULO NGIDI ",
+    date: new Date("2023-09-16T01:56:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_MpenduloNgidi.html"
+    ),
+  },
+  {
+    tag: tags.spotlight,
+    picture: picturePath(
       "/images/FifthEdition/YoungPeopleOnTheMove/Urcousinphayo/5ED_Urcousinphayo_main.jpg"
     ),
     pictureDesc: photoDescription("a dj mixing a looking to the side"),
