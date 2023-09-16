@@ -33,6 +33,20 @@ const tags = {
 
 export const headlines = [
   {
+    tag: tags.fifth,
+    picture: picturePath(
+      "/images/FifthEdition/poetry/5ED_Poetry_theBlackGoddess.jpg"
+    ),
+    pictureDesc: photoDescription("a black woman with her arms crossed"),
+    articleInfo: "The Black Goddess | P4P",
+    date: new Date("2023-09-16T02:48:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_poetry_theBlackGoddess.html"
+    ),
+  },
+  {
     tag: tags.spotlight,
     picture: picturePath(
       "/images/FifthEdition/YoungPeopleOnTheMove/MpenduloNgidi/5ED_MpenduloNgidi_main.jpg"
