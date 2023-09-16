@@ -1,37 +1,77 @@
-filterObjects("all");
-function filterObjects(c) {
-  let headlineCard, indexOfheadline;
+import { headlines } from "./allArticles.js";
+import getTimeElapsed, { getFormatedDate } from "./date.js";
 
-  headlineCard = document.getElementsByClassName("headline");
-  if (c == "all") c = "";
-  for (
-    indexOfheadline = 0;
-    indexOfheadline < headlineCard.length;
-    indexOfheadline++
-  ) {
-    removeClass(headlineCard[indexOfheadline], "show");
-    if (headlineCard[indexOfheadline].className.indexOf(c) > -1)
-      addClass(headlineCard[indexOfheadline], "show");
-  }
-}
+const currentEdition = "Fifth Edition";
+const currentEditionDisplay = document.getElementById("currentEdition");
+currentEditionDisplay.innerHTML = currentEdition;
 
-function addClass(element, name) {
-  let i, arr, arr2;
-  arr = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr.indexOf(arr2[i]) == -1) element.className += " " + arr2[i];
-  }
-}
-function removeClass(element, name) {
-  let i, arr, arr2;
-  arr = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    element.className += " " + arr2[i];
-    while (arr.indexOf(arr2[i]) > -1) arr.splice(arr.indexOf(arr2[i]), 1);
-  }
-  element.className = arr.join(" ");
-}
+const headlinesContainer = document.getElementById("headlines");
+headlines.forEach((headline, index) => {
+  let headlineList = `
+  <div class="headline ${index === 0 ? "main-headline" : ""} ${
+    headline.category === "cover" && headline.tag === currentEdition
+      ? "guest-headline"
+      : ""
+  } ">
+            <a
+              ${headline.link}
+              class="headline-links"
+            >
+              <div class="headline-imageholder">
+                <img
+                  ${headline.picture}
+                  class="headline-image"
+                  ${headline.pictureDesc}
+                />
+              </div>
+              <div class="info-container">
+                <div></div>
+                <div class="article-info"><p>${headline.articleInfo}</p></div>
+                <div class="article-date__container">
+                  <p class="full-date">${getFormatedDate(headline.date)}</p>
+                  <p>|</p>
+                  <p class="article-date">${getTimeElapsed(headline.date)}</p>
+                </div>
+                <div class="article-type">
+                  <p class="fine-print">${headline.type}</p>
+                </div>
+              </div>
+            </a>
+            <div class="banner ${headline.category} hero-banner">
+              <p class="banner-text">${headline.tag}</p>
+            </div>
+          </div>
+  `;
+  headlinesContainer.innerHTML += headlineList;
+});
 
-// show selected button
+const carrouselContainer = document.getElementById("carrouselContainer");
+headlines.map((headline, index) => {
+  if (index < 7) {
+    let carrousel = `
+    <div class="info-container__hero">
+            <a
+              ${headline.link}
+              ><div class="element-container">
+                <div class="banner ${headline.category} hero-banner">
+                  <p class="banner-text">${headline.tag}</p>
+                </div>
+                <div class="carrousel-imageholder">
+                  <img
+                    ${headline.picture}
+                    ${headline.pictureDesc}
+                    class="headline-image"
+                  />
+                </div>
+                <div class="info-hero">
+                  <p class="hero-text">
+                    ${headline.articleInfo}
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+    `;
+    carrouselContainer.innerHTML += carrousel;
+  }
+});

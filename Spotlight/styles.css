@@ -1,0 +1,253 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --color-primary: white;
+  --color-details: rgb(105, 105, 105);
+  --color-accent: #f6b398;
+  --color-black: #2d2d2d;
+  --color-light-black: #8f8e8e;
+  --color-light-grey: #f5f5f5;
+  --color-white: #fff;
+  --color-pearlS: #efaac4;
+  --color-health: #b0db43;
+  --color-upcoming: #00be70;
+  --color-first-edition: gold;
+  --color-cover: #b411b4;
+  --color-articles: #cf5c36;
+  --color-ads: red;
+  --color-color1: #2d3142;
+  --color-spiritual: #000000;
+  --color-social-justice: linear-gradient(
+    90deg,
+    rgba(255, 3, 0, 1) 0%,
+    rgba(255, 162, 0, 1) 16%,
+    rgba(230, 241, 20, 1) 31%,
+    rgba(22, 215, 49, 1) 47%,
+    rgba(16, 137, 193, 1) 64%,
+    rgba(15, 33, 236, 1) 77%,
+    rgba(93, 10, 238, 1) 85%,
+    rgba(214, 12, 181, 1) 100%,
+    rgba(192, 111, 112, 1) 100%
+  );
+  --weight-light: 200;
+  --weight-reg: 400;
+  --weigth-med: 500;
+  --weight-bold: 700;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-weight: var(--weight-reg);
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+
+/**Typography**/
+
+body h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+.fine-print {
+  font-size: 1.2rem;
+  color: var(--color-light-black);
+  text-transform: uppercase;
+  transition: all 250ms;
+}
+.white {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  height: 100%;
+  border-bottom: 1px solid lightgray;
+}
+.logo {
+  width: 20vw;
+}
+
+/* Header */
+header {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+/* popup */
+.window {
+  border: 1px solid red;
+  transform: scale(0);
+  margin: 0 auto;
+}
+
+.window.active {
+  height: 100px;
+  transform: scale(1);
+}
+
+.button.active {
+  transform: scale(1);
+}
+.button {
+  transform: scale(0);
+}
+
+/* Layout */
+body {
+  display: grid;
+  grid-template-rows: 1fr 1fr 8fr 1fr;
+  height: 100vh;
+}
+main {
+  height: 100%;
+}
+
+/* footer     */
+footer {
+  border-top: 1px solid lightgray;
+}
+.footer-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon-container {
+  display: flex;
+  padding: 1rem;
+}
+
+.footer-icons {
+  margin: 0 1rem;
+}
+
+/* spotlight */
+.spotlight-list-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.spotlight-list {
+  width: 100%;
+  height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.spotlight {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 4rem 2rem;
+  box-shadow: 0px 2px 18px -7px rgba(0, 0, 0, 0.26);
+}
+.spotlight:hover {
+  background-color: whitesmoke;
+}
+.spotlight-thumbnail {
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.spotlight-picture-container {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  border-radius: 35px;
+}
+.spotlight-picture {
+  width: 70px;
+}
+.spotlight-details {
+  width: 100%;
+  max-height: 120px;
+  padding: 2rem 4rem;
+  border-left: 1px solid rgb(243, 243, 243);
+}
+.spotlight-link {
+  text-decoration: none;
+  color: inherit;
+}
+.uploadedDuration {
+  color: dodgerblue;
+}
+.details-text {
+  color: var(--color-details);
+}
+@media screen and (min-width: 768px) {
+  .spotlight {
+    height: 200px;
+  }
+
+  .spotlight-picture-container {
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 60px;
+  }
+  .spotlight-picture {
+    width: 120px;
+  }
+  .spotlight-details {
+    width: 100%;
+    max-height: 200px;
+    padding: 2rem 4rem;
+    border-left: 1px solid rgb(243, 243, 243);
+  }
+  .spotlight-thumbnail {
+    width: 100%;
+  }
+}

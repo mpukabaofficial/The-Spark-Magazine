@@ -283,9 +283,28 @@ article p {
   margin: auto;
   max-width: 700px;
 }
+article li,
+article ol,
+article ul {
+  margin: 0 auto;
+  max-width: 700px;
+}
+#email {
+  color: rgb(83, 169, 255);
+}
+
+article h4 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem 0;
+}
 .quote {
   width: 100%;
   padding: 2rem;
+}
+.author {
+  font-style: italic;
+  color: var(--color-light-black);
 }
 .black {
   background-color: black;
@@ -530,4 +549,15 @@ p a:visited {
 
 blockquote {
   margin: auto;
+}
+
+.copy-link {
+  display: inline;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
 }
