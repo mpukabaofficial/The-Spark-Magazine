@@ -8,6 +8,7 @@
 }
 :root {
   --color-primary: white;
+  --color-secondary: #3f403f;
   --color-details: rgb(105, 105, 105);
   --color-accent: #f6b398;
   --color-black: #2d2d2d;
@@ -250,4 +251,29 @@ footer {
   .spotlight-thumbnail {
     width: 100%;
   }
+}
+.socials {
+  color: var(--color-secondary);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  height: auto;
+  padding: 1rem;
+}
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
 }

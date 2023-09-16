@@ -48,6 +48,20 @@ function getTimeElapsed(start, end) {
 
 const spotlightList = [
   {
+    name: "Urcousinphayo",
+    picture:
+      "src='/images/FifthEdition/YoungPeopleOnTheMove/Urcousinphayo/5ED_Urcousinphayo_main.jpg'",
+    fullname: "Nkosephayo Ntokozo Mndzebele",
+    industry: "Entrepreneur, DJ, Music",
+    details: `From the moment we are born, we begin to dream. Some dreams change with time, while
+     others remain a constant. But for all of us, there are those dreams that speak to our very
+     soul - the ones we know we must pursue, no matter what obstacles may stand in our way. While
+     not all of us are given the chance to see our dreams realized, those who do experience a
+     sense of fulfillment unlike any other. `,
+    link: "href='/Articles/FromOtherEditions/FifthEdition/5ED_Urcousinphayo.html'",
+    date: new Date("2023-09-16T00:00:00"),
+  },
+  {
     name: "Nomvuyo",
     picture:
       "src='/images/FifthEdition/YoungPeopleOnTheMove/Nomvuyo/5ED_image_Nomvuyo_closeUp.jpg'",
