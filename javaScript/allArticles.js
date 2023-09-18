@@ -35,6 +35,20 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/DigitalRegression/5ED_digitalRegression.jpg"
+    ),
+    pictureDesc: photoDescription("a black woman with her arms crossed"),
+    articleInfo: "Eswatini: A Land Fated By Digital Regression!",
+    date: new Date("2023-09-18T12:50:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_digitalRegression.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/poetry/5ED_Poetry_theBlackGoddess.jpg"
     ),
     pictureDesc: photoDescription("a black woman with her arms crossed"),
