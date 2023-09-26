@@ -35,6 +35,20 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/YoungPeopleOnTheMove/Slwane/5ED_behindTheComedy_main.jpg"
+    ),
+    pictureDesc: photoDescription("a picture of Slwane the comedia"),
+    articleInfo: "BEHIND THE COMEDY: Exploring the Creative Royalty of SLWANE!",
+    date: new Date("2023-09-26T16:32:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_behindTheComedy.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/DigitalRegression/5ED_digitalRegression.jpg"
     ),
     pictureDesc: photoDescription("a black woman with her arms crossed"),

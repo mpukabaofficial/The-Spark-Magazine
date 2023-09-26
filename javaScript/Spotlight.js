@@ -48,6 +48,26 @@ function getTimeElapsed(start, end) {
 
 const spotlightList = [
   {
+    name: "Slwane",
+    picture:
+      "src='/images/FifthEdition/YoungPeopleOnTheMove/Slwane/5ED_behindTheComedy_gogo.jpg'",
+    fullname: "Ncamiso Ntshingila",
+    industry: "Comedy, Entertainment",
+    details: `First word I think of whenever the name of this formidable man comes up is 
+    “pioneer”. In every sense this man is a creative trendsetter whose impeccable
+    contribution in the arts industry of the country has revolutionised the game in its
+    own distinct right. A peerless custodian of astounding entertainment who has kept
+    audiences on the edges of their seats with their jaws on the floor with laughter
+    over the years. Known for his matchless “Gogo and Slwane” skits, Ncamiso Ntshingila
+    with an impressive creative arts catalogue has made a name for himself as a
+    sought-after comedian, writer, producer, director, actor and dancer. This article
+    pursues to unveil the mask off the face of this comedy powerhouse and voyages around
+    the experiences and highlights of his laudable career with marginal insights on his
+    personal life.   `,
+    link: "href='/Articles/FromOtherEditions/FifthEdition/5ED_behindTheComedy.html'",
+    date: new Date("2023-09-26T16:32:00"),
+  },
+  {
     name: "Ngidi",
     picture:
       "src='/images/FifthEdition/YoungPeopleOnTheMove/MpenduloNgidi/5ED_MpenduloNgidi_main.jpg'",
