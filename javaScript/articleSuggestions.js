@@ -14,7 +14,7 @@ function randomNumbers() {
       count++;
     }
   }
-  return array;
+  return array.sort();
 }
 
 function getRandomNumber(max) {
