@@ -34,7 +34,7 @@ randomNumbers().forEach((number) => {
         class="suggest-image"
       />
     </div>
-    <div>
+    <div class="suggest-info">
       <p class="suggest-title">${headlines[number].articleInfo}</p>
       <p class="suggest-date">${getTimeElapsed(headlines[number].date)}</p>
     </div>

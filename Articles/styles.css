@@ -570,6 +570,7 @@ blockquote {
   background-color: rgb(240, 240, 240);
   border-radius: 16px;
   align-items: center;
+  overflow: hidden;
 }
 .suggest-container:hover {
   background-color: lightgray;
@@ -594,8 +595,15 @@ blockquote {
 .suggest-title {
   margin: 0;
   padding: 8px;
+  max-width: 1024px;
 }
 .suggest-date {
   color: dodgerblue;
   font-style: italic;
+}
+.suggest-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
