@@ -35,6 +35,23 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/YoungPeopleOnTheMove/NhloniphoLihleDlamini/5ED_Nhlonipho_main.png"
+    ),
+    pictureDesc: photoDescription(
+      "a picture of Nhlonipho on the stage carrying a microphone"
+    ),
+    articleInfo:
+      "Nhlonipho Dlamini: A Musical Journey from Swaziland to South Africa",
+    date: new Date("2023-10-23T12:02:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_NhloniphoLihleDlamini.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/YoungPeopleOnTheMove/Slwane/5ED_behindTheComedy_main.jpg"
     ),
     pictureDesc: photoDescription("a picture of Slwane the comedia"),
