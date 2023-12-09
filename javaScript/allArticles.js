@@ -35,6 +35,21 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/Mining Sector/ARTICLE COVER PICTURE.jpg"
+    ),
+    pictureDesc: photoDescription("a picture of a Swazi mine"),
+    articleInfo:
+      "The government of Eswatini has to cut off its monopolistic hand over the mining sector if it wants the economy to sky-rocket!",
+    date: new Date("2023-12-09T02:02:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_mining_sector.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/YoungPeopleOnTheMove/NhloniphoLihleDlamini/5ED_Nhlonipho_main.png"
     ),
     pictureDesc: photoDescription(
