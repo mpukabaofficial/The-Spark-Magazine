@@ -35,6 +35,22 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/YoungPeopleOnTheMove/Sisekelo Ramires Dlamini/5ED_YoungPeople OnTheMove_Remirez_main.jpg"
+    ),
+    pictureDesc: photoDescription(
+      "a picture of Sisekelo Ramires Dlamini in a church service"
+    ),
+    articleInfo: "ung and Called: Inside the Spiritual Tabernacle of Remires! ",
+    date: new Date("2023-12-19T13:52:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_SisekeloRemirez_Dlamini.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/Mining Sector/ARTICLE COVER PICTURE.jpg"
     ),
     pictureDesc: photoDescription("a picture of a Swazi mine"),
