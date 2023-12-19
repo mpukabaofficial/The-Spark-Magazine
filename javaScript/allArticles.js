@@ -40,7 +40,8 @@ export const headlines = [
     pictureDesc: photoDescription(
       "a picture of Sisekelo Ramires Dlamini in a church service"
     ),
-    articleInfo: "ung and Called: Inside the Spiritual Tabernacle of Remires! ",
+    articleInfo:
+      "Young and Called: Inside the Spiritual Tabernacle of Ramires! ",
     date: new Date("2023-12-19T13:52:00"),
     type: types.article,
     category: categories.themed,
