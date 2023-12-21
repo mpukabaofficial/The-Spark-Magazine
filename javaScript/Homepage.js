@@ -45,33 +45,39 @@ headlines.forEach((headline, index) => {
   headlinesContainer.innerHTML += headlineList;
 });
 
-const carrouselContainer = document.getElementById("carrouselContainer");
-headlines.map((headline, index) => {
-  if (index < 7) {
-    let carrousel = `
-    <div class="info-container__hero">
-            <a
-              ${headline.link}
-              ><div class="element-container">
-                <div class="banner ${headline.category} hero-banner">
-                  <p class="banner-text">${headline.tag}</p>
-                </div>
-                <div class="carrousel-imageholder">
-                  <img
-                    ${headline.picture}
-                    ${headline.pictureDesc}
-                    class="headline-image"
-                  />
-                </div>
-                <div class="info-hero">
-                  <p class="hero-text">
-                    ${headline.articleInfo}
-                  </p>
-                </div>
-              </div></a
-            >
-          </div>
-    `;
-    carrouselContainer.innerHTML += carrousel;
+// choose 5 numbers between 0 and headlines.length - 1
+// create a randomizer
+function randomNumbers() {
+  const arraySize = 5;
+  let array = [];
+  let count = 0;
+  while (count < arraySize) {
+    let currenNUmber = getRandomNumber(headlines.length - 1);
+    if (!array.includes(currenNUmber)) {
+      array[count] = currenNUmber;
+      count++;
+    }
   }
+  return array.sort();
+}
+
+function getRandomNumber(max) {
+  const randomFloat = Math.random();
+  const randomInRange = randomFloat * max;
+  return Math.floor(randomInRange);
+}
+
+console.log(randomNumbers());
+
+const suggested = document.getElementById("suggestedTitle");
+randomNumbers().forEach((number) => {
+  let navList = `
+  
+            <a ${headlines[number].link} class="nav-link">
+              <h6 class="suggestedTitle">${headlines[number].articleInfo}</h6>
+            </a>
+        
+    `;
+
+  suggested.innerHTML += navList;
 });

@@ -3,7 +3,7 @@ import getTimeElapsed from "./date.js";
 const suggestionContainer = document.getElementById("suggestions");
 const length = headlines.length;
 // create a randomizer
-function randomNumbers() {
+export function randomNumbers() {
   const arraySize = 3;
   let array = [];
   let count = 0;
@@ -24,8 +24,9 @@ function getRandomNumber(max) {
 }
 
 // create suggestions based on the numbers
-randomNumbers().forEach((number) => {
-  let suggestion = `
+export default function suggestions() {
+  randomNumbers().forEach((number) => {
+    let suggestion = `
     <a ${headlines[number].link} class="suggest-container">
     <div class="suggest-image__container">
       <img
@@ -40,5 +41,7 @@ randomNumbers().forEach((number) => {
     </div>
   </a>
 `;
-  suggestionContainer.innerHTML += suggestion;
-});
+    suggestionContainer.innerHTML += suggestion;
+  });
+}
+suggestions();

@@ -35,6 +35,23 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/The Age of AI/Man with Robot.jpg"
+    ),
+    pictureDesc: photoDescription(
+      "a picture of a human and a robot touching hands"
+    ),
+    articleInfo:
+      "The Age Of AI: Going Beneath The Skin Of The Phenomenon Of AI",
+    date: new Date("2023-12-21T13:40:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_AI_Part1.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/YoungPeopleOnTheMove/Sisekelo Ramires Dlamini/5ED_YoungPeople OnTheMove_Remirez_main.jpg"
     ),
     pictureDesc: photoDescription(
