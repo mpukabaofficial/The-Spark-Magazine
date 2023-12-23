@@ -48,6 +48,21 @@ function getTimeElapsed(start, end) {
 
 const spotlightList = [
   {
+    name: "Ramirez",
+    picture:
+      "src='/images/FifthEdition/YoungPeopleOnTheMove/Sisekelo Ramires Dlamini/5ED_YoungPeople OnTheMove_Remirez_main.jpg'",
+    fullname: "Sisekelo Dlamini",
+    industry: "Religious, Entertainment",
+    details: `Ever smiling, loving, born leader, visionary, young and commissioned. 
+    These are some of the words that can be instrumentalized to describe the Student
+    Christian Movement chairperson Sisekelo ‘Ramires’ Dlamini. The nickname comes
+    after former Chelsea midfield maestro Ramires Do Santos Nascimento who became a
+    European champion in 2012. Like Ramires, Sisekelo is fierce in his championship
+    of spreading the good news of the gospel to the world arena.  `,
+    link: "href='/Articles/FromOtherEditions/FifthEdition/5ED_SisekeloRemirez_Dlamini.html'",
+    date: new Date("2023-12-19T13:52:00"),
+  },
+  {
     name: "Slwane",
     picture:
       "src='/images/FifthEdition/YoungPeopleOnTheMove/Slwane/5ED_behindTheComedy_gogo.jpg'",
