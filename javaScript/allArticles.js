@@ -1,11 +1,11 @@
 function picturePath(path) {
-  return "src='" + path + "'";
+  return `src='${path}'`;
 }
 function linkPath(path) {
-  return "href='" + path + "'";
+  return `href='${path}'`;
 }
 function photoDescription(info) {
-  return "alt='" + info + "'";
+  return `alt='${info}'`;
 }
 const types = {
   ad: "Advertisements",
@@ -32,6 +32,23 @@ const tags = {
 };
 
 export const headlines = [
+  {
+    tag: tags.fifth,
+    picture: picturePath(
+      "/images/FifthEdition/YoungPeopleOnTheMove/Zandile/5ED_zandile_passion.jpg"
+    ),
+    pictureDesc: photoDescription(
+      "a picture of cookies and cream ice cream in a its container"
+    ),
+    articleInfo:
+      "Scoops and Giggles: Zandile Mabaso's Creative Journey to Ice Cream Success",
+    date: new Date("2024-01-01T17:00:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_Scoops_and_Giggles-Zandile_Mabaso.html"
+    ),
+  },
   {
     tag: tags.fifth,
     picture: picturePath(
