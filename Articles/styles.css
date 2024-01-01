@@ -523,6 +523,7 @@ input[type="text"] {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .fb-comments {
   margin: auto;
