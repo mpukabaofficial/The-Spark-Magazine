@@ -48,6 +48,20 @@ function getTimeElapsed(start, end) {
 
 const spotlightList = [
   {
+    name: "Zandile",
+    picture:
+      "src='/images/FifthEdition/YoungPeopleOnTheMove/Zandile/5ED_zandile_Selfie_main.jpg'",
+    fullname: "Zandile Mabaso",
+    industry: "Entrepreneur, Ice Cream, Food, Dessert",
+    details: ` Zandile Mabaso's story is one of creativity, passion, and a love for the 
+    simple pleasures in life. Born and raised in Manzini, Zandile's journey to becoming
+    the founder of Scoops and Giggles, a flourishing ice cream business, is a testament
+    to the power of following one's heart and embracing the things that bring joy and
+    fulfillment.  `,
+    link: "href='/Articles/FromOtherEditions/FifthEdition/5ED_Scoops_and_Giggles-Zandile_Mabaso.html'",
+    date: new Date("2024-01-01T17:00:00"),
+  },
+  {
     name: "Ramirez",
     picture:
       "src='/images/FifthEdition/YoungPeopleOnTheMove/Sisekelo Ramires Dlamini/5ED_YoungPeople OnTheMove_Remirez_main.jpg'",
