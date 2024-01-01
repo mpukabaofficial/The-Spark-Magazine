@@ -22,6 +22,7 @@ headlines.forEach((headline, index) => {
                   ${headline.picture}
                   class="headline-image"
                   ${headline.pictureDesc}
+                  loading="lazy"
                 />
               </div>
               <div class="info-container">

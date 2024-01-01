@@ -201,6 +201,7 @@ function createList(list) {
             ${element.picture}
             alt=""
             class="spotlight-picture"
+            loading="lazy"
           />
         </div>
         <div class="spotlight-name"><h4>${element.name}</h4></div>
