@@ -104,7 +104,6 @@ a:hover {
   text-decoration: none;
   color: inherit;
   width: 100%;
-  height: 100%;
 }
 
 /**Button**/
@@ -130,8 +129,12 @@ button {
 }
 
 /**logo**/
+.logoEditionContainer {
+  display: flex;
+  flex-direction: column;
+}
 .logo-container {
-  max-width: 50vw;
+  width: 100px;
 }
 .logo-image {
   width: 100%;
@@ -158,21 +161,6 @@ button {
   overflow: hidden;
 }
 
-/**embedded youtube**/
-iframe {
-  height: 100%;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  iframe {
-    height: 100%;
-    width: 100%;
-    max-height: 224px;
-    position: absolute;
-    z-index: 99;
-  }
-}
-
 /* Nofications banner */
 .notifications {
   background-color: #000;
@@ -182,6 +170,54 @@ iframe {
   color: var(--color-white);
   margin: auto;
   text-align: center;
+}
+
+/**Hero section**/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials {
+  display: none;
+}
+.socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  font-size: 1.2rem;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 4px 8px;
+  background: var(--color-light-grey);
+  border-radius: 5px;
+}
+.nav-links:hover {
+  background-color: var(--color-light-black);
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    width: fit-content;
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .edition {
+    left: 2rem;
+  }
 }
 
 /**article info**/
@@ -237,11 +273,12 @@ iframe {
 }
 
 .headline.main-headline {
-  background-color: var(--color-light-grey);
-  border: 3px solid rgb(175, 0, 0);
+  background-color: var(--color-black);
   border-radius: 2rem;
   width: 100%;
   padding: 16px;
+  border: none;
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 768px) {
@@ -307,6 +344,9 @@ iframe {
   width: 100%;
   position: sticky;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .suggestedTitle {
   color: rgb(175, 0, 0);
@@ -316,9 +356,6 @@ iframe {
   text-decoration: underline;
 }
 
-.nav-link {
-  margin: 1rem;
-}
 /**Imageholder**/
 .headline-imageholder {
   width: 100%;
@@ -401,48 +438,6 @@ iframe {
   }
 }
 
-/**Hero section**/
-.socials {
-  color: var(--color-secondary);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: auto;
-  padding: 1rem;
-}
-.socials a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.top-bar {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  border-bottom: 1px solid #f5f5f5;
-  padding: 1.5rem 0;
-  position: relative;
-}
-.edition {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .socials {
-    max-width: 300px;
-  }
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-  }
-  .edition {
-    left: 2rem;
-  }
-}
-
 /**Headlines section**/
 .fit-to-screen {
   max-width: 1024px;
@@ -506,90 +501,42 @@ footer {
     padding: 2rem;
   }
 }
+/* Modal */
 
-/* Form request */
-.form-request {
+@media screen and (min-width: 768px) {
+  .modal-button__open {
+    display: none;
+  }
+}
+.modal-container {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: #00be70;
-  width: 150px;
-  height: 100px;
-  border-radius: 10px;
-  color: white;
-  font-size: 15px;
-  padding: 1rem;
-  transform: scale(0);
-  animation: zoom 30s linear 2s 1 normal;
-}
-.form-request a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-
-  20% {
-    transform: translateY(-20px);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  60% {
-    transform: translateY(10px);
-  }
-  80% {
-    transform: scale(1.2);
-  }
-  99% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-/* end of styling----------------------------------------------- */
-
-/* Announcing new article */
-
-#popUp .headline {
-  max-width: 500px;
-  max-width: 500px;
-  background-color: white;
-}
-.popUp-btn {
-  font-size: 2rem;
-  color: grey;
-}
-
-/* --------------------------------------------- */
-
-/* abondoned functionality */
-
-/* this is for: Announcing new article */
-
-.get-started__container {
-  display: none;
-}
-
-/* this is for: Announcing new article */
-
-.popUp {
-  position: fixed;
-  z-index: 999;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.438);
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
   display: none;
-  align-items: center;
-  justify-content: center;
+  transition: all 250ms ease-in-out;
+}
+.modal-card {
+  background: white;
+  width: 80%;
+  margin: 8px auto;
+  height: 80vh;
+  border-radius: 10px;
+  display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+.modalSpotlight {
+  text-align: center;
+  margin: 64px 0;
+  padding: 4px;
+}
+.modalSocials {
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
 }

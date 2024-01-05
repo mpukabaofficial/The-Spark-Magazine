@@ -25,8 +25,10 @@ function getRandomNumber(max) {
 
 // create suggestions based on the numbers
 export default function suggestions() {
-  randomNumbers().forEach((number) => {
-    let suggestion = `
+  randomNumbers()
+    .sort()
+    .forEach((number) => {
+      let suggestion = `
     <a ${headlines[number].link} class="suggest-container">
     <div class="suggest-image__container">
       <img
@@ -41,7 +43,7 @@ export default function suggestions() {
     </div>
   </a>
 `;
-    suggestionContainer.innerHTML += suggestion;
-  });
+      suggestionContainer.innerHTML += suggestion;
+    });
 }
 suggestions();

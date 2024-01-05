@@ -49,3 +49,16 @@ export function getFormatedDate(date) {
   const year = date.getFullYear();
   return day + " " + month + " " + year;
 }
+
+export function isWithin24Hours(dateStr) {
+  const givenDate = new Date(dateStr);
+  const currentDate = new Date();
+
+  // Calculate the difference in milliseconds
+  const diff = currentDate - givenDate;
+
+  // Convert milliseconds to hours and check if it's within 24 hours
+  const hours = diff / 1000 / 60 / 60;
+
+  return hours <= 24;
+}

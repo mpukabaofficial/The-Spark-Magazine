@@ -1,9 +1,51 @@
 import { headlines } from "./allArticles.js";
-import getTimeElapsed, { getFormatedDate } from "./date.js";
+import getTimeElapsed, { getFormatedDate, isWithin24Hours } from "./date.js";
 
 const currentEdition = "Fifth Edition";
 const currentEditionDisplay = document.getElementById("currentEdition");
 currentEditionDisplay.innerHTML = currentEdition;
+
+// show notifications if theres a new article
+const notification = document.getElementById("notifications");
+const notifications = `
+  <div class="notifications">
+    <p class="notifications-text">
+      <a ${headlines[0].link} >New Article: ${headlines[0].articleInfo}</a>
+    </p>
+  </div>
+`;
+
+if (isWithin24Hours(headlines[0].date)) {
+  notification.innerHTML = notifications;
+}
+
+// Social Media
+const socials = document.getElementById("socials");
+const navDetails = `
+  <a href="/Spotlight/index.html" class="nav-links">Spotlights</a>
+    <a href="https://www.instagram.com/thesparkmagazineesw/"
+      ><div class="icons">
+        <img src="/images/icons/instagram.svg" class="icon" alt="" /></div
+    ></a>
+  <a href="https://www.facebook.com/thesparksd/"
+    ><div class="icons">
+      <img
+        src="/images/icons/facebook-f.svg"
+        class="icon"
+        alt=""
+      /></div
+  ></a>
+  <a href="mailto:mpukaba.official@gmail.com"
+    ><div class="icons">
+      <img
+        src="/images/icons/envelope-regular.svg"
+        class="icon"
+        alt=""
+      /></div
+  ></a>
+
+`;
+socials.innerHTML = navDetails;
 
 const headlinesContainer = document.getElementById("headlines");
 headlines.forEach((headline, index) => {
@@ -68,11 +110,11 @@ function getRandomNumber(max) {
   return Math.floor(randomInRange);
 }
 
-console.log(randomNumbers());
-
 const suggested = document.getElementById("suggestedTitle");
-randomNumbers().forEach((number) => {
-  let navList = `
+randomNumbers()
+  .sort()
+  .forEach((number) => {
+    let navList = `
   
             <a ${headlines[number].link} class="nav-link">
               <h6 class="suggestedTitle">${headlines[number].articleInfo}</h6>
@@ -80,5 +122,17 @@ randomNumbers().forEach((number) => {
         
     `;
 
-  suggested.innerHTML += navList;
+    suggested.innerHTML += navList;
+  });
+
+// modal
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal-container");
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+const openModal = document.getElementById("openModal");
+openModal.addEventListener("click", () => {
+  modal.style.display = "block";
 });

@@ -19,17 +19,13 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" type="image/png" href="/icon.png" />
-    <title>The Spark Magazine|Home</title>
+    <title>The Spark Magazine | Home</title>
   </head>
   <body>
-    <div class="notifications">
-      <p class="notifications-text">
-        <a href="/Spotlight/index.html">Check out Spotlights here!</a>
-      </p>
-    </div>
+    <div id="notifications"></div>
     <section class="hero">
       <nav class="nav">
-        <div class="top-bar">
+        <div class="logoEditionContainer">
           <div class="logo-container">
             <img
               src="/images/logo.png"
@@ -37,34 +33,16 @@
               class="logo-image"
             />
           </div>
-          <div class="socials">
-            <a href="https://www.instagram.com/thesparkmagazineesw/"
-              ><div class="icons">
-                <img
-                  src="/images/icons/instagram.svg"
-                  class="icon"
-                  alt=""
-                /></div
-            ></a>
-            <a href="https://www.facebook.com/thesparksd/"
-              ><div class="icons">
-                <img
-                  src="/images/icons/facebook-f.svg"
-                  class="icon"
-                  alt=""
-                /></div
-            ></a>
-            <a href="mailto:mpukaba.official@gmail.com"
-              ><div class="icons">
-                <img
-                  src="/images/icons/envelope-regular.svg"
-                  class="icon"
-                  alt=""
-                /></div
-            ></a>
-          </div>
           <p class="fine-print edition" id="currentEdition"></p>
         </div>
+
+        <div class="socials" id="socials"></div>
+
+        <button class="modal-button__open" id="openModal">
+          <div class="icons">
+            <img src="/images/icons/bars-solid.svg" alt="" class="icon" />
+          </div>
+        </button>
       </nav>
     </section>
 
@@ -76,6 +54,40 @@
         </div>
       </div>
       <div class="headlines" id="headlines"></div>
+    </div>
+
+    <!--modal  -->
+    <div class="modal-container" id="modal-container">
+      <button class="modal-button" id="closeModal">
+        <div class="icons">
+          <img src="/images/icons/xmark-solid.svg" alt="" class="icon" />
+        </div>
+      </button>
+      <div class="modal-card" id="modal-card">
+        <a href="/Spotlight/index.html" class="modalSpotlight">Spotlights</a>
+        <div class="modalSocials">
+          <a href="https://www.instagram.com/thesparkmagazineesw/"
+            ><div class="icons">
+              <img src="/images/icons/instagram.svg" class="icon" alt="" /></div
+          ></a>
+          <a href="https://www.facebook.com/thesparksd/"
+            ><div class="icons">
+              <img
+                src="/images/icons/facebook-f.svg"
+                class="icon"
+                alt=""
+              /></div
+          ></a>
+          <a href="mailto:mpukaba.official@gmail.com"
+            ><div class="icons">
+              <img
+                src="/images/icons/envelope-regular.svg"
+                class="icon"
+                alt=""
+              /></div
+          ></a>
+        </div>
+      </div>
     </div>
   </body>
   <script src="/javaScript/Homepage.js" type="module"></script>
