@@ -39,7 +39,7 @@ export const headlines = [
     ),
     pictureDesc: photoDescription("a picture of students in a classroom"),
     articleInfo: "A Win In School: Your Best Bet | Part 1",
-    date: new Date("2024-01-10T21:31:00"),
+    date: new Date("2024-01-10T21:35:00"),
     type: types.article,
     category: categories.themed,
     link: linkPath(
