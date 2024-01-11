@@ -41,7 +41,7 @@ export const headlines = [
     articleInfo: "A Win In School: Your Best Bet | Part 1",
     date: new Date("2024-01-10T21:35:00"),
     type: types.article,
-    category: categories.themed,
+    category: categories.otherEditions,
     link: linkPath(
       "/Articles/FromOtherEditions/SecondEdition/2ED_aWinInSchool.html"
     ),
