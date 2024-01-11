@@ -49,6 +49,21 @@ export const headlines = [
   {
     tag: tags.fifth,
     picture: picturePath(
+      "/images/FifthEdition/YoungPeopleOnTheMove/Zandile/5ED_zandile_passion.jpg"
+    ),
+    pictureDesc: photoDescription("an arial view of ice cream contianers"),
+    articleInfo:
+      "Scoops and Giggles: Zandile Mabaso's Creative Journey to Ice Cream Success ",
+    date: new Date("2024-01-10T21:55:00"),
+    type: types.article,
+    category: categories.themed,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_Scoops_and_Giggles-Zandile_Mabaso.html"
+    ),
+  },
+  {
+    tag: tags.fifth,
+    picture: picturePath(
       "/images/FifthEdition/The Age of AI/Man with Robot.jpg"
     ),
     pictureDesc: photoDescription(
