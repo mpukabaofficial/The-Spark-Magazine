@@ -33,20 +33,17 @@ const tags = {
 
 export const headlines = [
   {
-    tag: tags.fifth,
+    tag: tags.second,
     picture: picturePath(
-      "/images/FifthEdition/YoungPeopleOnTheMove/Zandile/5ED_zandile_passion.jpg"
+      "/images/SecondEdition/AWinInSchool/Part1/2ED_studentsInClass.jpg"
     ),
-    pictureDesc: photoDescription(
-      "a picture of cookies and cream ice cream in a its container"
-    ),
-    articleInfo:
-      "Scoops and Giggles: Zandile Mabaso's Creative Journey to Ice Cream Success",
-    date: new Date("2024-01-01T17:00:00"),
+    pictureDesc: photoDescription("a picture of students in a classroom"),
+    articleInfo: "A Win In School: Your Best Bet | Part 1",
+    date: new Date("2024-01-10T21:31:00"),
     type: types.article,
     category: categories.themed,
     link: linkPath(
-      "/Articles/FromOtherEditions/FifthEdition/5ED_Scoops_and_Giggles-Zandile_Mabaso.html"
+      "/Articles/FromOtherEditions/SecondEdition/2ED_aWinInSchool.html"
     ),
   },
   {
