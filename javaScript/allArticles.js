@@ -33,6 +33,20 @@ const tags = {
 
 export const headlines = [
   {
+    tag: tags.fifth,
+    picture: picturePath(
+      "/images/FifthEdition/PearlS/A Letter/5ED_A Letter_main.png"
+    ),
+    pictureDesc: photoDescription("a picture of a letter"),
+    articleInfo: "A Letter To The You Who Deserves Better",
+    date: new Date("2024-01-22T15:43:00"),
+    type: types.article,
+    category: categories.pearls,
+    link: linkPath(
+      "/Articles/FromOtherEditions/FifthEdition/5ED_PearlS_Letter.html"
+    ),
+  },
+  {
     tag: tags.second,
     picture: picturePath(
       "/images/SecondEdition/AWinInSchool/Part1/2ED_studentsInClass.jpg"
