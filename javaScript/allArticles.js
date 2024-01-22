@@ -595,16 +595,6 @@ export const headlines = [
   },
   {
     tag: tags.ad,
-    picture: picturePath("/images/Fourth Edition video.webp"),
-    pictureDesc: photoDescription("a snapshot of the advert video"),
-    articleInfo: "The Fourth Edition is on its way",
-    date: new Date("2022-05-27T00:00:00"),
-    type: types.ad,
-    category: categories.otherEditions,
-    link: linkPath("/videos/Fourth Edition(1).mp4"),
-  },
-  {
-    tag: tags.ad,
     picture: picturePath("/images/image - GBV poster.jpg"),
     pictureDesc: photoDescription(
       "a poster warning about gender-based violence"
