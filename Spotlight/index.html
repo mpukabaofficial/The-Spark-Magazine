@@ -1,64 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Meet the young people shaping culture, business and creativity in Eswatini." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/png" href="/icon.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/Spotlight/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/23f3d972ad.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>The Spark Magazine: Spotlights</title>
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <title>Young Voices — The Spark Magazine</title>
   </head>
   <body>
-    <nav>
-      <a href="/Home/index.html" class="logo-link">
-        <img
-          src="/images/logo.png"
-          alt="this is the logo of The Spark Magazine"
-          class="logo"
-        />
-      </a>
-    </nav>
-    <header>
-      <h1>Spotlight</h1>
+    <a class="skip-link" href="#spotlightList">Skip to profiles</a>
+    <header class="site-header">
+      <div class="masthead shell">
+        <a class="brand" href="/Home/index.html" aria-label="The Spark Magazine home">
+          <img src="/images/logo.png" alt="The Spark Magazine" />
+          <span>Fifth Edition</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="/Home/index.html#stories">Stories</a>
+          <a href="/Home/index.html#pillars">Culture</a>
+          <a href="/Home/index.html#pillars">Perspectives</a>
+          <a class="active" href="/Spotlight/index.html" aria-current="page">Young voices</a>
+          <a class="nav-cta" href="mailto:thesparkeswatini@gmail.com">Get in touch</a>
+        </nav>
+        <button class="menu-button" id="openMenu" aria-label="Open menu" aria-expanded="false"><img src="/images/icons/bars-solid.svg" alt="" /></button>
+      </div>
     </header>
+
     <main>
-      <!-- this is the flexible container -->
-      <div class="spotlight-list-container">
-        <!-- container for what we can see, it should be 1024px-->
-        <div class="spotlight-list" id="spotlightList">
-          <!-- details go here -->
-        </div>
-      </div>
+      <section class="directory-intro shell" aria-labelledby="page-title">
+        <div><p>Young people on the move</p><h1 id="page-title">Meet the voices<br /><em>shaping Eswatini.</em></h1></div>
+        <p class="intro-copy">Artists, entrepreneurs, thinkers and community builders creating their own paths and moving the country forward.</p>
+      </section>
+      <section class="spotlight-list-container" aria-label="Featured profiles">
+        <div class="spotlight-list" id="spotlightList"></div>
+      </section>
     </main>
-    <footer>
-      <div class="footer-container">
-        <div class="socials">
-          <a href="https://www.instagram.com/thesparkmagazineesw/"
-            ><div class="icons">
-              <i class="fab fa-instagram icon fa-2x"></i></div
-          ></a>
-          <a href="https://www.facebook.com/thesparksd/"
-            ><div class="icons">
-              <i class="fab fa-facebook-f icon fa-2x"></i></div
-          ></a>
-          <a href="mailto:mpukaba.official@gmail.com"
-            ><div class="icons">
-              <i class="fas fa-envelope icon fa-2x"></i></div
-          ></a>
-        </div>
-        <p class="fine-print edition" id="currentEdition"></p>
+
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+      <button class="menu-close" id="closeMenu" aria-label="Close menu">×</button>
+      <nav class="mobile-nav" aria-label="Mobile navigation"><span>Menu</span><a href="/Home/index.html#stories">Stories</a><a href="/Home/index.html#pillars">Culture</a><a href="/Home/index.html#pillars">Perspectives</a><a href="/Spotlight/index.html">Young voices</a><a href="mailto:thesparkeswatini@gmail.com">Contact</a></nav>
+    </div>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div><img src="/images/logo.png" alt="The Spark Magazine" /><p>Stories with a spark.</p></div>
+        <div><p class="footer-label">Explore</p><a href="/Home/index.html#stories">Latest stories</a><a href="/Spotlight/index.html">Young voices</a></div>
+        <div><p class="footer-label">Follow</p><a href="https://www.instagram.com/thesparkmagazineesw/">Instagram</a><a href="https://www.facebook.com/thesparksd/">Facebook</a></div>
+        <div><p class="footer-label">Contact</p><a href="mailto:thesparkeswatini@gmail.com">thesparkeswatini@gmail.com</a></div>
       </div>
+      <div class="shell footer-bottom"><p>© <span id="copyrightYear"></span> The Spark Magazine</p><p>Mbabane, Eswatini</p></div>
     </footer>
+    <script src="/javaScript/Spotlight.js"></script>
   </body>
-  <script src="/javaScript/Spotlight.js"></script>
 </html>

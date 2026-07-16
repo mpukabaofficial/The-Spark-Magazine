@@ -8,14 +8,16 @@ const day = date.getDate();
 const month = date.toLocaleString("default", { month: "long" });
 const year = date.getFullYear();
 
-lastModifiedText.innerHTML = `Last Edited: ${month} ${day}, ${year}`;
+if (lastModifiedText) {
+  lastModifiedText.textContent = `Last edited: ${month} ${day}, ${year}`;
+}
 
 // suggestions
 
 // suggestions();
 
 // changing the size of a picture once pressed
-const picture = document.getQuerySelectorAll(".article-images");
+const picture = document.querySelectorAll(".article-images");
 picture.forEach((pic) => {
   pic.addEventListener("click", () => {
     pic.classList.toggle("article-images--large");

@@ -2,137 +2,56 @@ import { headlines } from "./allArticles.js";
 import getTimeElapsed, { getFormatedDate, isWithin24Hours } from "./date.js";
 
 const currentEdition = "Fifth Edition";
-const currentEditionDisplay = document.getElementById("currentEdition");
-currentEditionDisplay.innerHTML = currentEdition;
+document.getElementById("currentEdition").textContent = currentEdition;
+document.getElementById("copyrightYear").textContent = new Date().getFullYear();
 
-// show notifications if theres a new article
-const notification = document.getElementById("notifications");
-const notifications = `
-  <div class="notifications">
-    <p class="notifications-text">
-      <a ${headlines[0].link} >New Article: ${headlines[0].articleInfo}</a>
-    </p>
-  </div>
-`;
+const attributeValue = (attribute, value) => value.match(new RegExp(`${attribute}=['\"]([^'\"]+)`))?.[1] ?? "";
+const articles = headlines.filter((item) => item.type === "Article");
 
-if (isWithin24Hours(headlines[0].date)) {
-  notification.innerHTML = notifications;
+if (articles[0] && isWithin24Hours(articles[0].date)) {
+  const href = attributeValue("href", articles[0].link);
+  document.getElementById("notifications").innerHTML = `<div class="notifications"><a href="${href}">New story — ${articles[0].articleInfo}</a></div>`;
 }
-
-// Social Media
-const socials = document.getElementById("socials");
-const navDetails = `
-  <a href="/Spotlight/index.html" class="nav-links">Spotlights</a>
-    <a href="https://www.instagram.com/thesparkmagazineesw/"
-      ><div class="icons">
-        <img src="/images/icons/instagram.svg" class="icon" alt="" /></div
-    ></a>
-  <a href="https://www.facebook.com/thesparksd/"
-    ><div class="icons">
-      <img
-        src="/images/icons/facebook-f.svg"
-        class="icon"
-        alt=""
-      /></div
-  ></a>
-  <a href="mailto:mpukaba.official@gmail.com"
-    ><div class="icons">
-      <img
-        src="/images/icons/envelope-regular.svg"
-        class="icon"
-        alt=""
-      /></div
-  ></a>
-
-`;
-socials.innerHTML = navDetails;
 
 const headlinesContainer = document.getElementById("headlines");
-headlines.forEach((headline, index) => {
-  let headlineList = `
-  <div class="headline ${index === 0 ? "main-headline" : ""} ${
-    headline.category === "cover" && headline.tag === currentEdition
-      ? "guest-headline"
-      : ""
-  } ">
-            <a
-              ${headline.link}
-              class="headline-links"
-            >
-              <div class="headline-imageholder">
-                <img
-                  ${headline.picture}
-                  class="headline-image"
-                  ${headline.pictureDesc}
-                  loading="lazy"
-                />
-              </div>
-              <div class="info-container">
-                <div></div>
-                <div class="article-info"><p>${headline.articleInfo}</p></div>
-                <div class="article-date__container">
-                  <p class="full-date">${getFormatedDate(headline.date)}</p>
-                  <p>|</p>
-                  <p class="article-date">${getTimeElapsed(headline.date)}</p>
-                </div>
-                <div class="article-type">
-                  <p class="fine-print">${headline.type}</p>
-                </div>
-              </div>
-            </a>
-            <div class="banner ${headline.category} hero-banner">
-              <p class="banner-text">${headline.tag}</p>
-            </div>
-          </div>
-  `;
-  headlinesContainer.innerHTML += headlineList;
+articles.slice(0, 11).forEach((article) => {
+  const href = attributeValue("href", article.link);
+  const src = attributeValue("src", article.picture);
+  const alt = attributeValue("alt", article.pictureDesc);
+  const card = document.createElement("article");
+  card.className = "headline";
+  card.innerHTML = `<a href="${href}" class="headline-link">
+    <div class="headline-imageholder"><img src="${src}" class="headline-image" alt="${alt}" loading="lazy" /></div>
+    <div class="story-meta"><span class="story-tag">${article.tag}</span><span>·</span><span>${article.type}</span></div>
+    <h3 class="story-title">${article.articleInfo}</h3>
+    <p class="story-date">${getFormatedDate(article.date)} · ${getTimeElapsed(article.date)}</p>
+  </a>`;
+  headlinesContainer.appendChild(card);
 });
 
-// choose 5 numbers between 0 and headlines.length - 1
-// create a randomizer
-function randomNumbers() {
-  const arraySize = 5;
-  let array = [];
-  let count = 0;
-  while (count < arraySize) {
-    let currenNUmber = getRandomNumber(headlines.length - 1);
-    if (!array.includes(currenNUmber)) {
-      array[count] = currenNUmber;
-      count++;
-    }
-  }
-  return array.sort();
-}
+const pickCategories = ["themed", "other-edition", "spiritual", "pearlS", "cover"];
+const editorPicks = pickCategories
+  .map((category) => articles.find((article, index) => index > 0 && article.category === category))
+  .filter((article, index, list) => article && list.indexOf(article) === index)
+  .slice(0, 5);
 
-function getRandomNumber(max) {
-  const randomFloat = Math.random();
-  const randomInRange = randomFloat * max;
-  return Math.floor(randomInRange);
-}
-
-const suggested = document.getElementById("suggestedTitle");
-randomNumbers()
-  .sort()
-  .forEach((number) => {
-    let navList = `
-  
-            <a ${headlines[number].link} class="nav-link">
-              <h6 class="suggestedTitle">${headlines[number].articleInfo}</h6>
-            </a>
-        
-    `;
-
-    suggested.innerHTML += navList;
-  });
-
-// modal
-const closeModal = document.getElementById("closeModal");
-const modal = document.getElementById("modal-container");
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
+editorPicks.forEach((article) => {
+  const link = document.createElement("a");
+  link.href = attributeValue("href", article.link);
+  link.className = "suggestion-link";
+  link.innerHTML = `<p class="suggestedTitle">${article.articleInfo}</p>`;
+  document.getElementById("suggestedTitle").appendChild(link);
 });
 
-const openModal = document.getElementById("openModal");
-openModal.addEventListener("click", () => {
-  modal.style.display = "block";
-});
+const overlay = document.getElementById("modal-container");
+const openButton = document.getElementById("openModal");
+const setMenu = (open) => {
+  overlay.classList.toggle("open", open);
+  overlay.setAttribute("aria-hidden", String(!open));
+  openButton.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("menu-open", open);
+};
+openButton.addEventListener("click", () => setMenu(true));
+document.getElementById("closeModal").addEventListener("click", () => setMenu(false));
+overlay.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (event) => event.key === "Escape" && setMenu(false));

@@ -213,8 +213,24 @@ function createList(list) {
         <p class="details-text">
         ${element.details}
         </p>
-</a>
+      </div>
+    </div>
+    </a>
     `;
     spotlights.innerHTML += list;
   });
 }
+
+document.getElementById("copyrightYear").textContent = new Date().getFullYear();
+const menuOverlay = document.getElementById("menuOverlay");
+const openMenuButton = document.getElementById("openMenu");
+const setMenu = (open) => {
+  menuOverlay.classList.toggle("open", open);
+  menuOverlay.setAttribute("aria-hidden", String(!open));
+  openMenuButton.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("menu-open", open);
+};
+openMenuButton.addEventListener("click", () => setMenu(true));
+document.getElementById("closeMenu").addEventListener("click", () => setMenu(false));
+menuOverlay.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (event) => event.key === "Escape" && setMenu(false));

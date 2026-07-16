@@ -1,129 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The Spark Magazine — independent stories, ideas and voices from Eswatini." />
     <link rel="stylesheet" href="/CSS/normalize.css" />
+    <link rel="stylesheet" href="/Home/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/23f3d972ad.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/icon.png" />
-    <title>The Spark Magazine | Home</title>
+    <title>The Spark Magazine — Stories from Eswatini</title>
   </head>
   <body>
+    <a class="skip-link" href="#stories">Skip to stories</a>
     <div id="notifications"></div>
-    <section class="hero">
-      <nav class="nav">
-        <div class="logoEditionContainer">
-          <div class="logo-container">
-            <img
-              src="/images/logo.png"
-              alt="This is the picture of the logo"
-              class="logo-image"
-            />
-          </div>
-          <p class="fine-print edition" id="currentEdition"></p>
-        </div>
-
-        <div class="socials" id="socials"></div>
-
-        <button class="modal-button__open" id="openModal">
-          <div class="icons">
-            <img src="/images/icons/bars-solid.svg" alt="" class="icon" />
-          </div>
+    <header class="site-header">
+      <div class="masthead shell">
+        <a class="brand" href="/Home/index.html" aria-label="The Spark Magazine home">
+          <img src="/images/logo.png" alt="The Spark Magazine" />
+          <span id="currentEdition"></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#stories">Stories</a>
+          <a href="#pillars">Culture</a>
+          <a href="#pillars">Perspectives</a>
+          <a href="/Spotlight/index.html">Young voices</a>
+          <a class="nav-cta" href="mailto:thesparkeswatini@gmail.com">Get in touch</a>
+        </nav>
+        <button class="menu-button" id="openModal" aria-label="Open menu" aria-expanded="false">
+          <img src="/images/icons/bars-solid.svg" alt="" />
         </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro shell" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow">The Fifth Edition · Eswatini</p>
+          <h1 id="intro-title">Our stories.<br /><em>Our spark.</em></h1>
+          <p class="intro-deck">A platform for emaSwati voices exploring who we are, what matters, and where we are going.</p>
+          <div class="intro-actions"><a class="primary-action" href="#stories">Read the stories</a><a href="/Spotlight/index.html">Meet the voices →</a></div>
+        </div>
+        <div class="issue-cover">
+          <div class="cover-accent" aria-hidden="true"></div>
+          <img src="/images/Cover Fifth Edition.png" alt="Cover of The Spark Magazine Fifth Edition" />
+          <p><strong>Edition 05</strong><span>People · Purpose · Progress</span></p>
+        </div>
+      </section>
+
+      <section class="pillars" id="pillars" aria-label="What we cover">
+        <div class="shell pillar-grid">
+          <p>What lights the spark</p><a href="#stories"><span>01</span>Young people</a><a href="#stories"><span>02</span>Culture & creativity</a><a href="#stories"><span>03</span>Social issues</a><a href="#stories"><span>04</span>Mind & spirit</a>
+        </div>
+      </section>
+
+      <section class="stories shell" id="stories" aria-labelledby="stories-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">From the magazine</p><h2 id="stories-title">Stories with something to say.</h2></div>
+          <p>Profiles, ideas, poetry and perspectives from across Eswatini.</p>
+        </div>
+        <div class="story-layout">
+          <aside class="discover" id="discover" aria-labelledby="discover-title">
+            <p class="eyebrow" id="discover-title">Editor's picks</p>
+            <div id="suggestedTitle"></div>
+          </aside>
+          <div class="headlines" id="headlines" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="menu-overlay" id="modal-container" aria-hidden="true">
+      <button class="menu-close" id="closeModal" aria-label="Close menu">×</button>
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <span>Menu</span>
+        <a href="#stories">Latest</a><a href="#discover">Discover</a>
+        <a href="/Spotlight/index.html">Spotlights</a>
+        <a href="mailto:thesparkeswatini@gmail.com">Contact</a>
       </nav>
-    </section>
-
-    <!--headlines-->
-    <div class="fit-to-screen main">
-      <div class="homeNav" id="homeNav">
-        <div class="navContainer" id="suggestedTitle">
-          <h5 class="nav-item-header">Suggested Articles</h5>
-        </div>
-      </div>
-      <div class="headlines" id="headlines"></div>
     </div>
 
-    <!--modal  -->
-    <div class="modal-container" id="modal-container">
-      <button class="modal-button" id="closeModal">
-        <div class="icons">
-          <img src="/images/icons/xmark-solid.svg" alt="" class="icon" />
-        </div>
-      </button>
-      <div class="modal-card" id="modal-card">
-        <a href="/Spotlight/index.html" class="modalSpotlight">Spotlights</a>
-        <div class="modalSocials">
-          <a href="https://www.instagram.com/thesparkmagazineesw/"
-            ><div class="icons">
-              <img src="/images/icons/instagram.svg" class="icon" alt="" /></div
-          ></a>
-          <a href="https://www.facebook.com/thesparksd/"
-            ><div class="icons">
-              <img
-                src="/images/icons/facebook-f.svg"
-                class="icon"
-                alt=""
-              /></div
-          ></a>
-          <a href="mailto:thesparkeswatini@gmail.com"
-            ><div class="icons">
-              <img
-                src="/images/icons/envelope-regular.svg"
-                class="icon"
-                alt=""
-              /></div
-          ></a>
-        </div>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div><img src="/images/logo.png" alt="The Spark Magazine" /><p>Stories with a spark.</p></div>
+        <div><p class="footer-label">Follow</p><a href="https://www.instagram.com/thesparkmagazineesw/">Instagram</a><a href="https://www.facebook.com/thesparksd/">Facebook</a></div>
+        <div><p class="footer-label">Contact</p><a href="mailto:thesparkeswatini@gmail.com">thesparkeswatini@gmail.com</a></div>
       </div>
-    </div>
-    <footer>
-      <p>
-        Contact us:
-        <a href="mailto:thesparkeswatini@gmail.com" class="footer-link">
-          thesparkeswatini@gmail.com</a
-        >
-      </p>
-
-      <p>Copyright © 2024 The Spark Magazine</p>
-      <p>
-        Developed by
-        <a href="https://www.versoincorp.com/" class="footer-link">
-          Versoin Technologies</a
-        >
-      </p>
-      <div class="modalSocials">
-        <a href="https://www.instagram.com/thesparkmagazineesw/"
-          ><div class="icons">
-            <img src="/images/icons/instagram.svg" class="icon" alt="" /></div
-        ></a>
-        <a href="https://www.facebook.com/thesparksd/"
-          ><div class="icons">
-            <img src="/images/icons/facebook-f.svg" class="icon" alt="" /></div
-        ></a>
-        <a href="mailto:thesparkeswatini@gmail.com"
-          ><div class="icons">
-            <img
-              src="/images/icons/envelope-regular.svg"
-              class="icon"
-              alt=""
-            /></div
-        ></a>
-      </div>
-      <!-- Add more links or information as needed -->
+      <div class="shell footer-bottom"><p>© <span id="copyrightYear"></span> The Spark Magazine</p><p>Mbabane, Eswatini</p></div>
     </footer>
+    <script src="/javaScript/Homepage.js" type="module"></script>
   </body>
-  <script src="/javaScript/Homepage.js" type="module"></script>
 </html>
